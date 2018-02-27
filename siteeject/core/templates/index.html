@@ -132,7 +132,7 @@
             <i class="fa fa-bars"></i>
           </button>
           <a class="navbar-brand" href="#brand">
-            <img src="assets/images/logoeject.png" class="logo" alt="">
+            <img src="{% static 'assets/images/logoeject.png' %}" class="logo" alt="">
             <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
           </a>
 
@@ -372,7 +372,7 @@
               <u style="color:#ffb000;"><h1>Quem Somos</h1></u>
             </div>
             <div class="col-md-12 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-              <p>Uma empresa júnior fundada em 15 de julho de 2010, formada apenas por alunos do Bacharelado de Ciências e Tecnologia da UFRN, que são compromissados, focados em resultados e que buscam um diferencial no mercado de trabalho. Prestamos diversos serviços à sociedade, encontrando soluções para variados problemas na área de desenvolvimento web.</p>
+              <p>{{ quem_somos.0 }}.</p>
             </div>
             <div class="col-md-12"><a href="" class="btn-voltar m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Veja Mais | <i class="fa fa-eye" aria-hidden="true"></i></a></div>
           </div>
@@ -574,7 +574,7 @@
             <div class="row text-center dificons">
               <!-- DIFERENCIAIS - QUALIDADE-->
               <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
-                <img src="assets/images/qualidade.svg" width="100px" height="100px">
+                <img src="{% static 'assets/images/qualidade.svg' %}" width="100px" height="100px">
                 <h2 class="fh5co-uppercase-sm" style="color: white;">Qualidade</h2>
                 <p>,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum.</p>
               </div>
@@ -582,7 +582,7 @@
               <!-- DIFERENCIAIS - ALTA TECNOLOGIA-->
 
               <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12  center wow animated fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
-                <img src="assets/images/tec.svg" width="100px" height="100px">
+                <img src="{% static 'assets/images/tec.svg' %}" width="100px" height="100px">
                 <h2 class="fh5co-uppercase-sm" style="color: white;">Tecnologia</h2>
                 <p>Lorem ipsum, Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
               </div>
@@ -590,7 +590,7 @@
               <!-- DIFERENCIAIS - PREÇO-->
 
               <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
-                <img src="assets/images/preco.svg" width="100px" height="100px">
+                <img src="{% static 'assets/images/preco.svg' %}" width="100px" height="100px">
                 <h2 class="fh5co-uppercase-sm" style="color: white;">Preço</h2>
                 <p>Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
               </div>
@@ -598,7 +598,7 @@
               <!-- DIFERENCIAIS - COMPROMISSO-->
 
               <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
-                <img src="assets/images/compromisso.svg" width="100px" height="100px">
+                <img src="{% static 'assets/images/compromisso.svg' %}" width="100px" height="100px">
                 <h2 class="fh5co-uppercase-sm" style="color: white;" >Compromisso</h2>
                 <p>Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
               </div>
@@ -672,7 +672,7 @@
               <h3><a href="#">Business theme</a></h3>
               <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
               <a class="preview" href="assets/images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
-              <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>  
+              <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>
             </div> 
           </div>
         </div>        
@@ -847,25 +847,17 @@
                       <div class="main_home text-center">
                         <div class="col-md-12">
                           <div class="hello_slid">
+                            {% for depoimento in depoimentos %}
                             <div class="slid_item">
                               <div class="home_text col-sm-12 col-md-12 col-xs-12">
-                                <div class="col-md-4 col-sm-2 fh5co-vcard"><img style="border-radius: 50%;" src="assets/images/userzanini.jpg"></div>
-                                <h3 class="text-white">“Como eu amo conhecer pessoas da qualidade de vocês, cheia de energia, paixão e brilho nos olhos. Eu acredito em vocês e sempre os levarei comigo. Continuem a transformar!!!”</h3>
-                                <h5 class="text-white text-left">- Stephani Zanini,<strong>Vetor Brasil</strong> -</h5>
+                                <div class="col-md-4 col-sm-2 fh5co-vcard"><img style="border-radius: 50%;" src="{{ depoimento.imagem.url }}"></div>
+                                <h3 class="text-white">“{{ depoimento.descricao }}”</h3>
+                                <h5 class="text-white text-left">- {{ depoimento.nome }},<strong>{{ depoimento.empresa }}</strong> -</h5>
                               </div>
                               <!-- INICIO DO FORM -->
                               <!-- FIM DO FORM -->
                             </div><!-- End off slid item -->
-
-                            <div class="slid_item">
-                              <div class="home_text col-sm-12 col-md-12 col-xs-12">
-                                <div class="col-md-4 col-sm-2 fh5co-vcard"><img style="border-radius: 50%;" src="assets/images/userfbc.jpg"></div>
-
-                                <h3 class="text-white">“Como eu amo conhecer pessoas da qualidade de vocês, cheia de energia, paixão e brilho nos olhos. Eu acredito em vocês e sempre os levarei comigo. Continuem a transformar!!!”</h3>
-                                <h5 class="text-white text-left">- Stephani Zanini,<strong>Vetor Brasil</strong> -</h5>
-                              </div>
-                              <!-- INICIO DO FORM -->
-                            </div><!-- SERVIÇOS - fim-->
+                            {% endfor %}
                             <!-- FINAL -->
                           </div>  
                         </div><!-- End off slid item -->
@@ -883,14 +875,9 @@
                   <div class="row">
                     <div class="container">
                       <section class="customer-logos slider">
-                        <div class="slide"><a href="http://financialbureauconsulting.com.br/" target="."><img src="assets/images/lep.png"></a></div>
-                        <div class="slide"><a href="http://ect.ufrn.br/" target="."><img src="assets/images/ect.png"></a></div>
-                        <div class="slide"><a href="http://imd.ufrn.br/" target="."><img src="assets/images/imd.jpg"></a></div>
-                        <div class="slide"><a href="http://inova.imd.ufrn.br/" target="."><img src="assets/images/inova.png"></a></div>
-                        <div class="slide"><a href="http://inpacta.ect.ufrn.br/" target="."><img src="assets/images/inpacta.png"></a></div>
-                        <div class="slide"><a href="http://rnjunior.com.br/" target="."><img src="assets/images/rnjunior.jpg"></a></div>
-                        <div class="slide"><a href="http://brasiljunior.org.br/" target="."><img src="assets/images/bj.jpg"></a></div>
-                        <!--<div class="slide"><img src="images/imd.jpg"></div>-->
+                        {% for parceiro in parceiros %}
+                        <div class="slide"><a href="{{ parceiro.link }}" target="."><img src="{{ parceiro.imagem.url }}"></a></div>
+                        {% endfor %}
                       </section>
                     </div>
                   </div>
