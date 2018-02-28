@@ -26,6 +26,7 @@ class Portifolio(CampoImagem):
 		('SW', 'Sistemas Web')
 	)
 	categoria = models.CharField('Categoria', max_length=100, choices=categorias, default='NA')
+	link = models.CharField('Link', max_length=100, default='')
 	
 	class Meta:
 		verbose_name_plural = 'Portfólio'

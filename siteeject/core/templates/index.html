@@ -634,91 +634,30 @@
 
   <div class="row">
     <div class="portfolio-items">
-      <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-4">
+      {% for item in portifolio %}
+      <div class="portfolio-item apps joomla wordpress
+      {% if item.categoria == 'SR' %}
+      bootstrap
+      {% elif item.categoria == 'SW' %}
+      html
+      {% endif %}
+      col-xs-12 col-sm-4 col-md-4">
         <div class="recent-work-wrap">
-          <img class="img-responsive" src="assets/images/portfolio/recent/item1.png" alt="">
+          <img class="img-responsive" src="{{ item.imagem.url }}" alt="">
           <div class="overlay">
             <div class="recent-work-inner">
-              <h3><a>Business theme</a></h3>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-              <a class="preview" href="assets/images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
-              <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>                        
+              <h3><a>{{ item.titulo }}</a></h3>
+              <p>{{ item.descricao }}</p>
+              <a class="preview" href="{{ item.imagem.url }}" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
+              <p><a href="{{ item.link }}" target="." style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>                        
             </div>
 
 
           </div>
         </div>
       </div><!--/.portfolio-item-->
-
-      <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-4">
-        <div class="recent-work-wrap">
-          <img class="img-responsive" src="assets/images/portfolio/recent/item2.png" alt="">
-          <div class="overlay">
-            <div class="recent-work-inner">
-              <h3><a href="#">Business theme</a></h3>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-              <a class="preview" href="assets/images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
-              <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>  
-            </div> 
-          </div>
-        </div>          
-      </div><!--/.portfolio-item-->
-
-      <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-4">
-        <div class="recent-work-wrap">
-          <img class="img-responsive" src="assets/images/portfolio/recent/item3.png" alt="">
-          <div class="overlay">
-            <div class="recent-work-inner">
-              <h3><a href="#">Business theme</a></h3>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-              <a class="preview" href="assets/images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
-              <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>
-            </div> 
-          </div>
-        </div>        
-      </div><!--/.portfolio-item-->
-
-      <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-4">
-        <div class="recent-work-wrap">
-          <img class="img-responsive" src="assets/images/portfolio/recent/item4.png" alt="">
-          <div class="overlay">
-            <div class="recent-work-inner">
-              <h3><a href="#">Business theme</a></h3>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-              <a class="preview" href="assets/images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
-              <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>  
-            </div> 
-          </div>
-        </div>           
-      </div><!--/.portfolio-item-->
-
-      <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-4">
-        <div class="recent-work-wrap">
-          <img class="img-responsive" src="assets/images/portfolio/recent/item5.png" alt="">
-          <div class="overlay">
-            <div class="recent-work-inner">
-              <h3><a href="#">Business theme</a></h3>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-              <a class="preview" href="assets/images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
-              <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>  
-            </div> 
-          </div>
-        </div>      
-      </div><!--/.portfolio-item-->
-
-      <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-4">
-        <div class="recent-work-wrap">
-          <img class="img-responsive" src="assets/images/portfolio/recent/item6.png" alt="">
-          <div class="overlay">
-            <div class="recent-work-inner">
-              <h3><a href="#">Business theme</a></h3>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-              <a class="preview" href="assets/images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
-              <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>
-            </div> 
-          </div>
-        </div>         
-      </div><!--/.portfolio-item-->
+      {% endfor %}
+      <!--/.portfolio-item-->
     <!--
                         <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-4">
                             <div class="recent-work-wrap">
