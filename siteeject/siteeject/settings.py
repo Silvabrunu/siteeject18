@@ -128,3 +128,8 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'siteeject/media')
 MEDIA_URL = '/siteeject/media/'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'periclesgdc'
+EMAIL_HOST_PASSWORD = 'tico1212'
+EMAIL_USE_SSL = True
