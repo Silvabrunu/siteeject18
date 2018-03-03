@@ -19,3 +19,10 @@ def index(request):
             context['enviado'] = form.send_email()
 
     return render(request, 'index.html', context)
+
+def quem_somos(request):
+    context = {
+        'quem_somos': QuemSomos.objects.all()
+    }
+
+    return render(request, 'quem-somos.html', context)
