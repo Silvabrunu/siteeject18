@@ -1,0 +1,1169 @@
+<!doctype html>
+{% load static %}
+{% load widget_tweaks %}
+  <html class="no-js" lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>EJECT - Soluções Web</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" sizes="192x192" href="assets/images/iconeject.png">
+      <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" type="image/png">
+      <!--Google Font link-->
+      <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+            <link rel="stylesheet" href="{% static 'assets/css/oneline.css' %}">
+
+      <link rel="stylesheet" href="{% static 'assets/css/slick/slick.css' %}"> 
+      <link rel="stylesheet" href="{% static 'assets/css/slick/slick-theme.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+      <link rel="stylesheet" href="{% static 'animate.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/iconfont.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}">
+
+      <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+      <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet">
+      <link href="{% static 'assets/css/prettyPhoto.css' %}" rel="stylesheet">
+      <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+      <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet"> 
+
+      <!-- Owl Carousel -->
+      <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+        <!-- xsslider slider css -->
+
+      <!-- CAROUSEL SLICK   -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+      <link rel="stylesheet" type="text/css" href="{% static 'carousel.css' %}" rel="stylesheet" type="text/css" >
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="{% static 'slick.js' %}" type="text/javascript" charset="utf-8"></script>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <!-- CAROUSEL SLICK  - FIM -->
+
+
+      <!--<link rel="stylesheet" href="assets/css/xsslider.css">-->
+
+      <!--For Plugins external css-->
+      <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+
+      <!--Theme custom css -->
+      <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+      <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
+      <link rel="stylesheet" href="{% static 'assets/css/lightbox.min.css' %}">
+      <!--THEMEFISHER-->
+      <link rel="stylesheet" href="{% static 'assets/plugins/themefisher-font/style.css' %}">
+      <!--Theme Responsive css-->
+      <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+        <div class="culmn">
+          <!--Home page style-->
+          <nav class="navbar navbar-default bootsnav navbar-fixed">
+              <div class="navbar-top bg-cinzanav fix">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-10">
+                              <div class="navbar-callus text-left sm-text-center">
+                                  <ul class="list-inline">
+                                      <li><a href="" style="color: black;"><i class="fa fa-envelope-o" style="color: black;"></i> Nos mande um E-mail: contato@ejectufrn.com.br</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="navbar-socail text-right sm-text-center">
+                                  <ul class="list-inline">
+                                      <li><a href="http://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                      <li><a href="https://www.instagram.com/ejectufrn/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                      <li><a href="https://www.linkedin.com/company/16219994/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Start Top Search -->
+              <div class="top-search">
+                  <div class="container">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i style="color:#6f6f6f;" class="fa fa-search color:black"></i></span>
+                          <input type="text" class="form-control" placeholder="Procurar">
+                          <span class="input-group-addon close-search"><i style="color:#6f6f6f;" class="fa fa-times"></i></span>
+                      </div>
+                  </div>
+              </div>
+              <!-- End Top Search -->
+
+
+              <div class="container"> 
+                  <div class="attr-nav">
+                      <ul>
+                          <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                      </ul>
+                  </div> 
+                  <!-- Start Header Navigation -->
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                          <i class="fa fa-bars"></i>
+                      </button>
+                      <a class="navbar-brand" href="#brand">
+                          <img src="{% static 'assets/images/logoeject.png' %}" class="logo" alt="">
+                          <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
+                      </a>
+
+                  </div>
+                  <!-- End Header Navigation -->
+                  <!-- navbar menu -->
+                  <div class="collapse navbar-collapse" id="navbar-menu">
+                      <ul class="nav navbar-nav navbar-right" style="height: 60px;">
+                          <li><a href="#home">Inicio</a></li>                    
+                          <li><a href="#features">Quem Somos</a></li>
+                          <li><a href="#pricing">Serviços</a></li>
+                          <li><a href="#portfolio">Portfólio</a></li>
+                          <li><a href="#contato">Contato</a></li>
+                          <li><a href="http://ejectufrn.com.br/blog">Blog</a></li>
+                          <li><a style="padding-top: 25px;" href="https://api.whatsapp.com/send?phone=5584999411273&text=Olá,%20temos%20a%20solução%20web%20para%20você!." target="."><div class="ligamos" align="center"><i class="fa fa-whatsapp"></i> Whatsapp</div></a></li>
+                      </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div> 
+            </nav>
+
+            <!--Home Sections-->
+            <section id="home" class="home bg-black fix">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="main_home text-center">
+                            <div class="col-md-12">
+                                <div class="hello_slid">
+                                    <div class="slid_item">
+                                      {% for carousel in banner %}
+                                      {% if not forloop.last %}
+                                        <div class="home_text col-sm-6 col-md-8 col-xs-12">
+                                            <h1 class="text-white">{{ carousel.title }}</h1>
+                                            <h2 class="text-white">{{ carousel.advertising }}</h2>
+                                            <h3 class="text-white">{{ carousel.description }}</h3>
+                                        </div>
+                                        
+
+                                        <!-- INICIO DO FORM -->
+                                       <div class="col-sm-6 col-md-4 col-xs-12" align="center">
+                                          <div class="formulario">
+                                            <h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
+                                            <form class="form-header" action="." role="form" method="post" name="formSlide">
+
+                                                <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
+                                                <input type="hidden" name="id" value="bfdba52708">
+                                                {% csrf_token %}
+                                              
+                                          
+                                               
+                                                {% render_field form.slide value=form.slide.value %}
+                                                {% render_field form.slide value="{{ carousel.title}}" %}
+
+                                                <!-- SERVIÇOS-->
+                                                <div class="form-group"> 
+                                                  <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                      {% render_field form.about name="service" class="form-control selectpicker" placeholder="Assunto" required="requeired" %}
+                                                    </div>
+                                                  </div><!-- SERVIÇOS - fim-->
+
+                                                  <div class="form-group">
+
+                                                    {% render_field form.name class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Nome e Sobrenome" required="required" %}
+                                                    
+                                                  </div>
+                                                  <div class="form-group">
+                                                    {% render_field form.email class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="E-mail" required="required" %}
+                                                   
+                                                  </div>
+                                                  <div class="form-group">
+                                                    {% render_field form.phone class="form-control input-lg" name="MERGE0" id="fone" type="fone" placeholder="Telefone" required="required" %}
+                                                    
+                                                  </div>
+                                                  <!-- MELHOR FORMA -->
+                                                  <div class="form-group" >
+                                                      <label >Deseja receber contatos por:</label>
+
+                                                    <div class="radio">
+                                                      {% for radio in form.deviceContact %}
+                                                      <label name="forma_contato" style="padding-left: 20px" required="required">
+                                                        
+                                                        {{ radio.tag }}
+                                                          {{ radio.choice_label }}
+                                                      </label>
+                                                      {% endfor %}
+                                                      
+                                                        
+                                                    </div>
+                                                      
+                                                </div>
+                                                {% for error in form.errors %}
+                                                  {{ error }}
+                                                {% endfor %}
+
+                                                <div class="form-group last">
+                                                  <input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
+                                                </div>
+  <!--<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>-->
+                           <!-- MELHOR FORMA -->
+                                              </form>
+                                          </div>      
+                                          <!-- FIM DO FORM -->
+                                      </div>
+                                  </div><!-- End off slid item -->
+                                  {% endif %}
+                                  {% if forloop.last %}
+                                  <div class="slid_item">
+                                    <div class="home_text col-sm-6 col-md-8 col-xs-12">
+                                      <h1 class="text-white">{{ carousel.title }}</h1>
+                                      <h2 class="text-white">{{ carousel.advertising }}</h2>
+                                      <h3 class="text-white">{{ carousel.description }}</h3>
+                                    </div>
+                                        
+
+                                        <!-- INICIO DO FORM -->
+                                       <div class="col-sm-6 col-md-4 col-xs-12" align="center">
+                                          <div class="formulario">
+                                            <h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
+                                            <form class="form-header" action="." role="form" method="POST" name="formSlide">
+                                                <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
+                                                <input type="hidden" name="id" value="bfdba52708">
+                                                {% csrf_token %}
+                                              
+                                          
+                                               
+                                                {% render_field form.slide value=form.slide.value %}
+                                                {% render_field form.slide value="{{ carousel.title}}" %}
+
+                                                <!-- SERVIÇOS-->
+                                                <div class="form-group"> 
+                                                  <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                      {% render_field form.about name="formSlide" class="form-control selectpicker" placeholder="Assunto" required="requeired" %}
+                                                    </div>
+                                                  </div><!-- SERVIÇOS - fim-->
+
+                                                  <div class="form-group">
+
+                                                    {% render_field form.name class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Nome e Sobrenome" required="required" %}
+                                                    
+                                                  </div>
+                                                  <div class="form-group">
+                                                    {% render_field form.email class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="E-mail" required="required" %}
+                                                   
+                                                  </div>
+                                                  <div class="form-group">
+                                                    {% render_field form.phone class="form-control input-lg" name="MERGE0" id="fone" type="fone" placeholder="Telefone" required="required" %}
+                                                    
+                                                  </div>
+                                                  <!-- MELHOR FORMA -->
+                                                  <div class="form-group" >
+                                                      <label >Deseja receber contatos por:</label>
+
+                                                    <div class="radio">
+                                                      {% for radio in form.deviceContact %}
+                                                      <label name="forma_contato" style="padding-left: 20px" required="required">
+                                                        
+                                                        {{ radio.tag }}
+                                                          {{ radio.choice_label }}
+                                                      </label>
+                                                      {% endfor %}
+                                                      
+                                                        
+                                                    </div>
+                                                      
+                                                </div>
+                                                {% for error in form.errors %}
+                                                  {{ error }}
+                                                {% endfor %}
+                                                <div class="form-group last">
+                                                  <input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
+                                                </div>
+  <!--<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>-->
+                           <!-- MELHOR FORMA -->
+                                              </form>
+                                          </div>      
+                                          <!-- FIM DO FORM -->
+                                      </div>
+                                  </div><!-- End off slid item -->
+
+                                  {% endif %}
+
+                                  {% endfor %}
+
+                                    <!-- <div class="slid_item">
+                                        <div class="home_text col-sm-6 col-md-8 col-xs-12">
+                                            <h1 class="text-white">Bem vindo a <strong>EJECT</strong></h1>
+                                            <h2 class="text-white">Criamos a <strong>Solução Web</strong> Mais Alinhada com o Seu Negócio</h2>
+                                            <h3 class="text-white">- Afinal, O Nosso Compromisso é com o <strong>Seu Resultado</strong> -</h3>
+                                        </div>
+
+                                        <!-- INICIO DO FORM 
+                                       <div class="col-sm-6 col-md-4 col-xs-12" align="center">
+                                          <div class="formulario">
+                                            <h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
+                                            <form class="form-header" action="http://moxdesign.us10.list-manage.com/subscribe/post" role="form" method="POST" id="#">
+                                                <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
+                                                <input type="hidden" name="id" value="bfdba52708">
+                                                <!-- SERVIÇOS
+                                                <div class="form-group"> 
+                                                  <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                      <select name="service" class="form-control selectpicker" >
+                                                        <option value=" " >Selecione o serviço desejado</option>
+                                                        <option >Sites Responsivos</option>
+                                                        <option >Sistemas Web</option>
+                                                        <option >Hospedagem de Dados</option>
+                                                      </select>
+                                                    </div>
+                                                  </div><!-- SERVIÇOS - fim
+
+                                                  <div class="form-group">
+                                                      <input class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Nome e Sobrenome" required>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="E-mail" required>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input class="form-control input-lg" name="MERGE0" id="fone" type="fone" placeholder="Telefone" required>
+                                                  </div>
+                                                  <!-- MELHOR FORMA 
+                                                  <div class="form-group">
+                                                      <label >Deseja receber contatos por:</label>
+
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="forma_contato" value="E-mail" /> E-mail
+                                                        </label>
+
+                                                        <label>
+                                                            <input type="radio" name="forma_contato" value="no" /> Telefone
+                                                        </label>
+
+                                                        <label>
+                                                            <input type="radio" name="forma_contato" value="no" /> Whatsapp
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group last">
+                                                  <input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
+                                                </div>
+  <!--<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>-->
+                           <!-- MELHOR FORMA 
+                                              </form>
+                                          </div>      
+                                          <!-- FIM DO FORM 
+                                      </div>
+                                  </div><!-- End off slid item 
+                                  
+                                    <div class="slid_item">
+                                        <div class="home_text col-sm-6 col-md-8 col-xs-12">
+                                            <h1 class="text-white">Bem vindo a <strong>EJECT</strong></h1>
+                                            <h2 class="text-white">Criamos a <strong>Solução Web</strong> Mais Alinhada com o Seu Negócio</h2>
+                                            <h3 class="text-white">- Afinal, O Nosso Compromisso é com o <strong>Seu Resultado</strong> -</h3>
+                                        </div>
+
+                                        <!-- INICIO DO FORM 
+                                       <div class="col-sm-6 col-md-4 col-xs-12" align="center">
+                                          <div class="formulario">
+                                            <h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
+                                            <form class="form-header" action="http://moxdesign.us10.list-manage.com/subscribe/post" role="form" method="POST" id="#">
+                                                <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
+                                                <input type="hidden" name="id" value="bfdba52708">
+                                                <!-- SERVIÇOS
+                                                <div class="form-group"> 
+                                                  <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                      <select name="service" class="form-control selectpicker" >
+                                                        <option value=" " >Selecione o serviço desejado</option>
+                                                        <option >Sites Responsivos</option>
+                                                        <option >Sistemas Web</option>
+                                                        <option >Hospedagem de Dados</option>
+                                                      </select>
+                                                    </div>
+                                                  </div><!-- SERVIÇOS - fim
+
+                                                  <div class="form-group">
+                                                      <input class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Nome e Sobrenome" required>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="E-mail" required>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <input class="form-control input-lg" name="MERGE0" id="fone" type="fone" placeholder="Telefone" required>
+                                                  </div>
+                                                  <!-- MELHOR FORMA 
+                                                  <div class="form-group">
+                                                      <label >Deseja receber contatos por:</label>
+
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="forma_contato" value="E-mail" /> E-mail
+                                                        </label>
+
+                                                        <label>
+                                                            <input type="radio" name="forma_contato" value="no" /> Telefone
+                                                        </label>
+
+                                                        <label>
+                                                            <input type="radio" name="forma_contato" value="no" /> Whatsapp
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group last">
+                                                  <input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
+                                                </div>
+  <!--<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>
+                           <!-- MELHOR FORMA 
+                                              </form>
+                                          </div>      
+                                          <!-- FIM DO FORM 
+                                      </div>
+                                  </div> End off slid item -->                               
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
+
+
+            <!--Featured Section-->
+            <section id="features" class="features bg-white">
+              <div class="container ">
+                  <div class="row">
+                      <div class="main_features fix roomy-70" style="padding-bottom: 30px;padding-top: 20px;">
+                          <div class="col-md-12 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                            <u style="color:#ffb000;"><h1>Quem Somos</h1></u>
+                          </div>
+                          <div class="col-md-12 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                              <p>Uma empresa júnior fundada em 15 de julho de 2010, formada apenas por alunos do Bacharelado de Ciências e Tecnologia da UFRN, que são compromissados, focados em resultados e que buscam um diferencial no mercado de trabalho. Prestamos diversos serviços à sociedade, encontrando soluções para variados problemas na área de desenvolvimento web.</p>
+                          </div>
+                          <div class="col-md-12"><a href="" class="btn-voltar m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Veja Mais | <i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Featured Section-->
+
+            <!--Seção de Serviços-->
+            <!-- Start Pricing section
+                    =========================================== -->
+            <section class="pricing-table  bg-servicos section" id="pricing">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="title text-center">
+                                <h2 class="ajustesserver">Nossos Serviços</h2>
+                                <span class="border"></span>
+                                <p class="ajusteserviço">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- single pricing table -->
+                        <div class="col-md-4 col-sm-4 col-xs-12" >
+                            <div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                                            <a href="https://www.facebook.com/ejectufrn" target="_blank"><div class="post-icon">
+                <i class="fa fa-search-plus"></i></a>
+              </div>
+                                <!-- plan name & value -->
+                                <div class="price-title bg-pricing">
+                                    <h3>Sites Responsivos</h3>
+                                    <a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-laptop service-icon"></i></a>
+                                    <p>Perfeito para pessoas e empresas que querem ganhar visibilidade e presença de mercado</p>
+                                </div>
+                                <!-- /plan name & value -->
+
+                                <!-- plan description -->
+                                <ul>
+                                    <li>Institucionais</li>
+                                    <li>Landing Pages</li>
+                                    <li>Blogs</li>
+                                    <li>E-Commerce</li>
+
+                                </ul>
+                                <!-- /plan description -->
+
+                        <form action="." method="post" class="grop-from" id="formServicoResponsivo">
+                          {% csrf_token %}
+
+                          <div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
+                          <div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+                            <div class="form-controls">
+                              {% render_field form2.name id="control-name" placeholder="Seu Nome" required="requeired" %}
+                              {% render_field form2.phone id="control-phone" placeholder="Telefone" required="requeired" %}
+                              {% render_field form2.email id="control-email" placeholder="Email" required="requeired" %}
+
+                              {% for error in form.errors %}
+                                {{ error.label }}
+                              {% endfor %}
+                            </div>
+                            
+                          </div><a class="form-action"><i class="icon-action"></i></a>
+                          <input type="submit">
+                        </form>
+                                <!-- Botão Quero Agora -->
+                                <!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
+                                <!-- /signup button -->
+
+                            </div>
+                        </div>
+                        <!-- end single pricing table -->
+
+                        <!-- single pricing table -->
+                        <div class="col-md-4 col-sm-4 col-xs-12"  >
+                            <div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                            <a href="https://www.facebook.com/ejectufrn" target="_blank"><div class="post-icon">
+                <i class="fa fa-search-plus"></i></a>
+              </div>
+                                <!-- plan name & value -->
+                                <div class="price-title  bg-pricing">
+                                    <h3>Sistemas Web</h3>
+                                    <a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-sitemap service-icon"></i></a>
+                                    <p>Ideal para empresas que buscam melhorar os seus processos, informatizando-os e reduzindo assim custos</p>
+                                </div>
+                                <!-- /plan name & value -->
+
+                                <!-- plan description -->
+                                <ul>
+                                    <li>Gestão Interna</li>
+                                    <li>CRM</li>
+                                    <li>Eventos</li>
+                                    <li>Estoque</li>
+                                    </ul>
+                                <!-- /plan description -->
+                          <form class="grop-from" id="signup">
+                            <div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
+                            <div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+                              <div class="form-controls">
+                                <input id="control-name" placeholder="Seu Nome"/>
+                                <input id="control-phone" placeholder="Telefone"/>
+                                <input id="control-email" placeholder="Email"/>
+                              </div>
+                            </div><a class="form-action"><i class="icon-action"></i></a>
+                          </form>
+                                <!-- Botão Quero Agora -->
+                                <!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
+                                <!-- /signup button -->
+
+                            </div>
+                        </div>
+                        <!-- end single pricing table -->
+                    <div class="col-md-4 col-sm-4 col-xs-12"  >
+                            <div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                            <a href="https://www.facebook.com/ejectufrn" target="_blank"><div class="post-icon">
+                <i class="fa fa-search-plus"></i></a>
+              </div>
+                                <!-- plan name & value -->
+                                <div class="price-title  bg-pricing">
+                                    <h3>Hospedagem</h3>
+                                    <a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-cloud service-icon"></i></a>
+                                    <p>Armazene os seus dados e projetos com segurança, tendo-os disponiveis 24h por dia e 7 dias por semana!</p>
+                                </div>
+                                <!-- /plan name & value -->
+
+                                <!-- plan description -->
+                                <ul>
+                                    <li>Planos anuais</li>
+                                    <li>Cloud</li>
+                                    <li>Email</li>
+                                    <li>Backups</li>
+                                    </ul>
+                                <!-- /plan description -->
+                          <form class="grop-from" id="signup">
+                            <div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
+                            <div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+                              <div class="form-controls">
+                                <input id="control-name" placeholder="Seu Nome"/>
+                                <input id="control-phone" placeholder="Telefone"/>
+                                <input id="control-email" placeholder="Email"/>
+                              </div>
+                            </div><a class="form-action"><i class="icon-action"></i></a>
+                          </form>
+                                <!-- Botão Quero Agora -->
+                                <!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
+                                <!-- /signup button -->
+
+                            </div>
+                        </div>
+                        <!-- single pricing table -->
+                        <!-- end single pricing table -->
+                    </div>       <!-- End row -->
+                </div>      <!-- End container -->
+            </section>   <!-- End section -->
+
+<!-- CTA's dos Serviços
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Quero agora</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nome:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+        <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Email:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Telefone:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Fale um pouco sobre o seu projeto:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Enviar Mensagem</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+        <!-- DIFERENCIAIS -->
+          <section id="diferenciais">
+            <div>
+                <div>
+                  <div class="container">
+                    <div class="col-md-8 col-md-offset-2 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                        <div class="ajustessec">
+                        <h2 style="color:white">Nossos DIFERENCIAIS</h2>
+                        <p style="color: white">A EJECT é a empresa júnior de C&T, lorem ipsum, lorem ipsum, lorem ipsum ,lorem ipsum ,lorem ipsum ,lorem ipsum ,lorem ipsum lorem ipsum,lorem ipsum</p>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                  <div class="col-md-12">
+                      <div class="row text-center dificons">
+                        <!-- DIFERENCIAIS - QUALIDADE-->
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
+                            <img src="assets/images/qualidade.svg" width="100px" height="100px">
+                            <h2 class="fh5co-uppercase-sm" style="color: white;">Qualidade</h2>
+                            <p>,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum.</p>
+                        </div>
+
+                        <!-- DIFERENCIAIS - ALTA TECNOLOGIA-->
+
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12  center wow animated fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
+                            <img src="assets/images/tec.svg" width="100px" height="100px">
+                            <h2 class="fh5co-uppercase-sm" style="color: white;">Tecnologia</h2>
+                            <p>Lorem ipsum, Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
+                        </div>
+
+                        <!-- DIFERENCIAIS - PREÇO-->
+
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+                            <img src="assets/images/preco.svg" width="100px" height="100px">
+                            <h2 class="fh5co-uppercase-sm" style="color: white;">Preço</h2>
+                            <p>Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
+                        </div>
+
+                        <!-- DIFERENCIAIS - COMPROMISSO-->
+
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+                            <img src="assets/images/compromisso.svg" width="100px" height="100px">
+                            <h2 class="fh5co-uppercase-sm" style="color: white;" >Compromisso</h2>
+                            <p>Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-md-push-4 fh5co-text-wrap">
+                        <div class="row text-center">
+                        </div>
+                    </div>
+                  </div>
+                 </div>
+                </div>  
+              </div>
+            </section>
+          <!-- DIFERENCIAIS - FIM -->
+
+
+          <!--  INICIO DO PORTFOLIO-->
+          <section id="portfolio">
+            <div class="container">
+                <div class="center">
+                   <h2>Portfolio</h2>
+                   <p class="lead">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
+                </div>
+
+
+                <ul class="portfolio-filter text-right">
+                    <li><a class="btn btn-default active" href="#" data-filter="*">Todos</a></li>
+                    <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Sites Responsivos</a></li>
+                    <li><a class="btn btn-default" href="#" data-filter=".html">Sistemas Web</a></li>
+                </ul><!--/#portfolio-filter-->
+
+                <div class="row">
+                    <div class="portfolio-items">
+                        <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-4">
+                            <div class="recent-work-wrap">
+                                <img class="img-responsive" src="assets/images/portfolio/recent/item1.png" alt="">
+                                <div class="overlay">
+                                    <div class="recent-work-inner">
+                                        <h3><a>Business theme</a></h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                        <a class="preview" href="assets/images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
+                                        <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>                        
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div><!--/.portfolio-item-->
+
+                        <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-4">
+                            <div class="recent-work-wrap">
+                                <img class="img-responsive" src="assets/images/portfolio/recent/item2.png" alt="">
+                                <div class="overlay">
+                                    <div class="recent-work-inner">
+                                        <h3><a href="#">Business theme</a></h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                        <a class="preview" href="assets/images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
+                                        <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>  
+                                    </div> 
+                                </div>
+                            </div>          
+                        </div><!--/.portfolio-item-->
+
+                        <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-4">
+                            <div class="recent-work-wrap">
+                                <img class="img-responsive" src="assets/images/portfolio/recent/item3.png" alt="">
+                                <div class="overlay">
+                                    <div class="recent-work-inner">
+                                        <h3><a href="#">Business theme</a></h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                        <a class="preview" href="assets/images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
+                                        <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>  
+                                    </div> 
+                                </div>
+                            </div>        
+                        </div><!--/.portfolio-item-->
+
+                        <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-4">
+                            <div class="recent-work-wrap">
+                                <img class="img-responsive" src="assets/images/portfolio/recent/item4.png" alt="">
+                                <div class="overlay">
+                                    <div class="recent-work-inner">
+                                        <h3><a href="#">Business theme</a></h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                        <a class="preview" href="assets/images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
+                                        <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>  
+                                    </div> 
+                                </div>
+                            </div>           
+                        </div><!--/.portfolio-item-->
+
+                        <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-4">
+                            <div class="recent-work-wrap">
+                                <img class="img-responsive" src="assets/images/portfolio/recent/item5.png" alt="">
+                                <div class="overlay">
+                                    <div class="recent-work-inner">
+                                        <h3><a href="#">Business theme</a></h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                        <a class="preview" href="assets/images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
+                                        <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>  
+                                    </div> 
+                                </div>
+                            </div>      
+                        </div><!--/.portfolio-item-->
+
+                        <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-4">
+                            <div class="recent-work-wrap">
+                                <img class="img-responsive" src="assets/images/portfolio/recent/item6.png" alt="">
+                                <div class="overlay">
+                                    <div class="recent-work-inner">
+                                        <h3><a href="#">Business theme</a></h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                        <a class="preview" href="assets/images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Visualizar</a>
+                                        <p><a href="https://www.ejectufrn.com.br" style="color: white"><i class="fa fa-globe"></i> Conferir no Site</a></p>
+                                    </div> 
+                                </div>
+                            </div>         
+                        </div><!--/.portfolio-item-->
+    <!--
+                        <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-4">
+                            <div class="recent-work-wrap">
+                                <img class="img-responsive" src="assets/images/portfolio/recent/item7.png" alt="">
+                                <div class="overlay">
+                                    <div class="recent-work-inner">
+                                        <h3><a href="#">Business theme</a></h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                        <a class="preview" href="assets/images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                    </div> 
+                                </div>
+                            </div>          
+                        </div><!--/.portfolio-item-->
+    <!--
+                        <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-4">
+                            <div class="recent-work-wrap">
+                                <img class="img-responsive" src="assets/images/portfolio/recent/item8.png" alt="">
+                                <div class="overlay">
+                                    <div class="recent-work-inner">
+                                        <h3><a href="#">Business theme</a></h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                        <a class="preview" href="assets/images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                    </div> 
+                                </div>
+                            </div>          
+                        </div><!--/.portfolio-item-->
+                    </div>
+                </div>
+            </div>
+        </section><!--/#portfolio-item-->
+    <!--  FIM DO PORTFOLIO-->
+<!-- BLOG -->
+  <section id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <h2>Blog</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+        </div>
+      </div>
+      <div class="blog-posts">
+        <div class="row">
+          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+            <div class="post-thumb">
+              <a href="#"><img class="img-responsive" src="assets/images/blog/1.jpg" alt=""></a> 
+              <div class="post-meta">
+                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
+                <span><i class="fa fa-heart"></i> 0 Likes</span> 
+              </div>
+            </div>
+            <div class="entry-header blog-space">
+              <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
+              <span class="date">June 26, 2014</span>
+              <span class="cetagory">in <strong>Photography</strong></span>
+            </div>
+            <div class="entry-content blog-space">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="post-thumb">
+              <div id="post-carousel"  class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#post-carousel" data-slide-to="1"></li>
+                  <li data-target="#post-carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <a href="#"><img class="img-responsive" src="assets/images/blog/2.jpg" alt=""></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"><img class="img-responsive" src="assets/images/blog/1.jpg" alt=""></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"><img class="img-responsive" src="assets/images/blog/3.jpg" alt=""></a>
+                  </div>
+                </div>                               
+                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+              </div>                            
+              <div class="post-meta">
+                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
+                <span><i class="fa fa-heart"></i> 0 Likes</span> 
+              </div>
+            </div>
+            <div class="entry-header blog-space">
+              <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
+              <span class="date">June 26, 2014</span>
+              <span class="cetagory">in <strong>Photography</strong></span>
+            </div>
+            <div class="entry-content blog-space">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
+            <div class="post-thumb">
+              <a href="#"><img class="img-responsive" src="assets/images/blog/3.jpg" alt=""></a>
+              <div class="post-meta">
+                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
+                <span><i class="fa fa-heart"></i> 0 Likes</span> 
+              </div>
+            </div>
+            <div class="entry-header blog-space">
+              <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
+              <span class="date">June 26, 2014</span>
+              <span class="cetagory">in <strong>Photography</strong></span>
+            </div>
+            <div class="entry-content blog-space">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+          </div>                    
+        </div>
+        </div>
+    </div>
+  </section><!--/#blog-->
+
+          
+          
+        <!-- DEPOIMENTOS -->
+        <!--Home Sections-->
+        <section id="depoi" class="depoi bg-black fix">
+           <!-- <div class="filtrodepoi"></div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="main_home text-center">
+                        <div class="col-md-12">
+                            <div class="hello_slid">
+                                <div class="slid_item">
+                                    <div class="home_text col-sm-12 col-md-12 col-xs-12">
+                                        <div class="col-md-4 col-sm-2 fh5co-vcard"><img style="border-radius: 50%;" src="assets/images/userzanini.jpg"></div>
+                                        <h3 class="text-white">“Como eu amo conhecer pessoas da qualidade de vocês, cheia de energia, paixão e brilho nos olhos. Eu acredito em vocês e sempre os levarei comigo. Continuem a transformar!!!”</h3>
+                                        <h5 class="text-white text-left">- Stephani Zanini,<strong>Vetor Brasil</strong> -</h5>
+                                    </div>
+                                    <!-- INICIO DO FORM -->
+                                    <!-- FIM DO FORM -->
+                                </div><!-- End off slid item -->
+                              
+                                <div class="slid_item">
+                                    <div class="home_text col-sm-12 col-md-12 col-xs-12">
+                                        <div class="col-md-4 col-sm-2 fh5co-vcard"><img style="border-radius: 50%;" src="assets/images/userfbc.jpg"></div>
+
+                                        <h3 class="text-white">“Como eu amo conhecer pessoas da qualidade de vocês, cheia de energia, paixão e brilho nos olhos. Eu acredito em vocês e sempre os levarei comigo. Continuem a transformar!!!”</h3>
+                                        <h5 class="text-white text-left">- Stephani Zanini,<strong>Vetor Brasil</strong> -</h5>
+                                    </div>
+                                    <!-- INICIO DO FORM -->
+                                  </div><!-- SERVIÇOS - fim-->
+                                <!-- FINAL -->
+                                </div>  
+                              </div><!-- End off slid item -->
+                            </div><!--End off row-->
+                          </div><!--End off row-->
+                        </div><!--End off container -->
+                      </section> <!--End off Home Sections-->
+                      <!-- / Testimonial-->
+                      <!-- FIM DOS DEPOIMENTOS -->
+                      <!-- SLICK Carousel -->
+
+                    <section id="parceiros">
+                      <h2 align="center"> Nossos PARCEIROS </h2>
+
+                      <div class="row">
+                        <div class="container">
+                            <section class="customer-logos slider">
+                              {% for parceiro in partner %}
+                                <div class="slide"><a href="{{ parceiro.link }}" target="."><img src="{{ parceiro.image.url }}"></a></div>
+                              {% endfor %}
+                            </section>
+                        </div>
+                      </div>
+                  </section>
+                  <!-- SLICK Carousel - FIM -->   
+                  <!-- Srart Contact Us
+                  =========================================== -->     
+                  <section id="contato" class="bg-azultop fix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="title text-center">
+
+                                    <h2 style="color:white">Entre em contato</h2>
+                                    <span class="border"></span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <!-- Contact Details -->
+                            <div class="col-md-6">
+                              <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                  <p>Nossa sede está localizada no Instituto Metrópole Digital (IMD - UFRN), sala B412 (4° piso)</p>
+                                  <ul class="address">
+                                      <li><i class="fa fa-map-marker"></i> <span> Endereço:</span> Av. Capitão Mor. Gouvéia, Lagoa Nova, CEP: 59075-050 </li>
+                                      <li><i class="fa fa-phone"></i> <span> Telefone:</span> +55 (84) 3342-2216 Ramal 206 </li>
+                                      <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:contato@ejectufrn.com.br"> contato@ejectufrn.com.br</a></li>
+                                  </ul>
+                                </div>
+
+                                    <div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
+                              </div>
+
+                    <!--<div class="map">
+                        <div id="map"></div>
+                    </div>-->
+
+                <!-- / End Contact Details -->
+
+
+                <!-- Contact Form -->
+                <div class="contact-form col-md-6">
+                    <form id="contact-form" method="post" action="sendmail.php" role="form">
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu Nome" class="form-control" name="Nome" id="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu Telefone" class="form-control" name="Telefone" id="name">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu Melhor Email" class="form-control" name="email" id="email">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Assunto" class="form-control" name="subject" id="subject">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea rows="6" placeholder="Mensagem" class="form-control" name="message" id="message"></textarea>   
+                        </div>
+
+                        <div id="mail-success" class="success">
+                            Thank you. The Mailman is on His Way :)
+                        </div>
+
+                        <div id="mail-fail" class="error">
+                            Sorry, don't know what happened. Try later :(
+                        </div>
+
+                        <div id="cf-submit">
+                            <input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar">
+                        </div>                      
+                    </form>
+                </div>
+                <!-- ./End Contact Form -->
+              </div>
+            </div> <!-- end row -->
+          </section>
+          
+          <div class="md-modal md-effect-1" id="modal-1">
+            <div class="md-content">
+              <h3 style="color: #fff">Saiba Mais</h3>
+              <div>
+                <a class="md-close" href="#pricing" style="color:#fff; float:right;">X</a>
+                <br>
+                <p align="center">Por favor, selecione uma das opções abaixo para mais informações:</p>
+                <br>
+                <button class="btn btn-queroagora">Sites Responsivos | <i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+                <br>
+                <button class="btn btn-queroagora"> Sistemas Web | <i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+                <br>
+                <button class="btn btn-queroagora">Hospedagem | <i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+                <br>
+              </div>
+            </div>
+          </div>
+          
+          <footer>
+            <div class="main_footer fix bg-white text-center p-top-40 p-bottom-30 m-top-0" style="padding-top: 25px;padding-bottom: 15px;">
+                 <div class="col-md-12 center wow animated fadeInUp" style="visibility: visible; animation-name: fadeInDown;">
+                    <a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-facebook" ></i></a>
+                    <a href="https://www.instagram.com/ejectufrn/" target="_blank"><i class="fa fa-instagram" ></i></a>
+                    <a href="https://www.linkedin.com/company/16219994/ " target="_blank"><i class="fa fa-linkedin" ></i></a>
+
+
+                  <font color="black"><p class="rodape wow fadeInRight" data-wow-duration="1s">
+                      Feito com <i class="fa fa-bullseye" style="color: #336687;"></i>e Compromisso pela<a href="https://www.ejectufrn.com.br" target="_blank" style="color: #336687;">EJECT</a> 
+                      |  2017.</p> </font>
+                    </div>
+                </div>
+            </footer>
+        </div>
+      
+      
+        <!-- JS includes -->
+
+        <script src="{% static 'assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/jquery-1.11.2.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+
+
+        <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.easing.1.3.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.collapse.js' %}"></script>
+        <script src="{% static 'assets/js/bootsnav.js' %}"></script>
+
+        <!-- lightbox -->
+        <script src="{% static 'assets/js/lightbox.min.js' %}"></script>
+        <!-- mix -->
+        <script src="{% static 'assets/js/mixitup.min.js' %}"></script>
+
+        <script src="{% static 'assets/js/plugins.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+        <script src="{% static 'assets/js/particle.js' %}"></script>
+        <!-- Owl Carousel -->
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <!--PORTFOLIO
+        <script src="assets/js/2jquery.js"></script>
+        --><script src="{% static 'assets/js/2jquery.prettyPhoto.js' %}"></script>
+        <script src="{% static 'assets/js/2jquery.isotope.min.js' %}"></script>
+        <script src="{% static 'assets/js/2main.js' %}"></script>      
+        <script src="{% static 'assets/js/2wow.min.js' %}"></script>
+
+            <script  src="{% static 'assets/js/oneline.js' %}"></script>
+
+        <!-- Slick -->
+        <script src="{% static 'assets/slick.js' %}" type="text/javascript" charset="utf-8"></script>
+
+        <script src="{% static 'assets/js/particles.js' %}"></script>
+        <script src="{% static 'assets/js/app.js' %}"></script>
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: false,
+                dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        });
+      </script>
+    </body>
+</html>
