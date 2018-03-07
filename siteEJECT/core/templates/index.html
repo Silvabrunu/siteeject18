@@ -174,16 +174,10 @@
                                           <div class="formulario">
                                             <h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
                                             <form class="form-header" action="." role="form" method="post" name="formSlide">
-
-                                                <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-                                                <input type="hidden" name="id" value="bfdba52708">
                                                 {% csrf_token %}
-                                              
                                           
-                                               
-                                                {% render_field form.slide value=form.slide.value %}
-                                                {% render_field form.slide value="{{ carousel.title}}" %}
-
+                                                <input value="valido" id="validacaoProposta" name="validacaoProposta" type="hidden" >
+                                                <input value="{{ carousel.title }}" id="validacaoProposta" name="tituloSlide" type="hidden" >
                                                 <!-- SERVIÇOS-->
                                                 <div class="form-group"> 
                                                   <div class="input-group">
@@ -250,21 +244,16 @@
                                        <div class="col-sm-6 col-md-4 col-xs-12" align="center">
                                           <div class="formulario">
                                             <h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
-                                            <form class="form-header" action="." role="form" method="POST" name="formSlide">
-                                                <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-                                                <input type="hidden" name="id" value="bfdba52708">
+                                            <form class="form-header" action="." role="form" method="post" name="formSlide">
                                                 {% csrf_token %}
-                                              
                                           
-                                               
-                                                {% render_field form.slide value=form.slide.value %}
-                                                {% render_field form.slide value="{{ carousel.title}}" %}
-
+                                                <input value="valido" id="validacaoProposta" name="validacaoProposta" type="hidden" >
+                                                <input value="{{ carousel.title }}" id="validacaoProposta" name="tituloSlide" type="hidden" >
                                                 <!-- SERVIÇOS-->
                                                 <div class="form-group"> 
                                                   <div class="input-group">
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                                                      {% render_field form.about name="formSlide" class="form-control selectpicker" placeholder="Assunto" required="requeired" %}
+                                                      {% render_field form.about name="service" class="form-control selectpicker" placeholder="Assunto" required="requeired" %}
                                                     </div>
                                                   </div><!-- SERVIÇOS - fim-->
 
@@ -301,6 +290,7 @@
                                                 {% for error in form.errors %}
                                                   {{ error }}
                                                 {% endfor %}
+
                                                 <div class="form-group last">
                                                   <input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
                                                 </div>
@@ -509,23 +499,21 @@
                                 </ul>
                                 <!-- /plan description -->
 
-                        <form action="." method="post" class="grop-from" id="formServicoResponsivo">
+                        <form action="." method="post" class="grop-from" id="signup">
                           {% csrf_token %}
-
+                          <input value="valido" id="validacaoServicoResponsivo" name="validacaoServicoResponsivo" type="hidden" >
                           <div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
                           <div class="form-body"><span class="error-text">Please Fill Out This Field</span>
                             <div class="form-controls">
                               {% render_field form2.name id="control-name" placeholder="Seu Nome" required="requeired" %}
                               {% render_field form2.phone id="control-phone" placeholder="Telefone" required="requeired" %}
-                              {% render_field form2.email id="control-email" placeholder="Email" required="requeired" %}
+                              {% render_field form2.email id="control-email" placeholder="Email" required="requeired" %}  
 
-                              {% for error in form.errors %}
+                              {% for error in form2.errors %}
                                 {{ error.label }}
-                              {% endfor %}
-                            </div>
-                            
-                          </div><a class="form-action"><i class="icon-action"></i></a>
-                          <input type="submit">
+                              {% endfor %}   
+                            </div>       
+                          </div><a class="form-action"><i class="icon-action"></i></a><button type="submit" class="btn" type="button" style="border-radius: 80px; width: 55px">Enviar</button>   
                         </form>
                                 <!-- Botão Quero Agora -->
                                 <!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
@@ -557,16 +545,22 @@
                                     <li>Estoque</li>
                                     </ul>
                                 <!-- /plan description -->
-                          <form class="grop-from" id="signup">
+                          <form action="." method="post" class="grop-from" id="signup">
+                          {% csrf_token %}
+                            <input value="valido" id="validacaoServicoSistemaWEB" name="validacaoServicoSistemaWEB" type="hidden" >
                             <div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
                             <div class="form-body"><span class="error-text">Please Fill Out This Field</span>
                               <div class="form-controls">
-                                <input id="control-name" placeholder="Seu Nome"/>
-                                <input id="control-phone" placeholder="Telefone"/>
-                                <input id="control-email" placeholder="Email"/>
-                              </div>
-                            </div><a class="form-action"><i class="icon-action"></i></a>
-                          </form>
+                                {% render_field form3.name id="control-name" placeholder="Seu Nome" required="requeired" %}
+                                {% render_field form3.phone id="control-phone" placeholder="Telefone" required="requeired" %}
+                                {% render_field form3.email id="control-email" placeholder="Email" required="requeired" %}
+                              
+                                {% for error in form3.errors %}
+                                  {{ error.label }}
+                                {% endfor %}
+                            </div> 
+                          </div><a class="form-action"><i class="icon-action"></i></a><button type="submit" class="btn" type="button" style="border-radius: 80px; width: 55px">Enviar</button>
+                        </form>
                                 <!-- Botão Quero Agora -->
                                 <!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
                                 <!-- /signup button -->
@@ -595,16 +589,22 @@
                                     <li>Backups</li>
                                     </ul>
                                 <!-- /plan description -->
-                          <form class="grop-from" id="signup">
+                          <form action="." method="post" class="grop-from" id="signup">
+                          {% csrf_token %}
+                            <input value="valido" id="validacaoServicoHospedagem" name="validacaoServicoHospedagem" type="hidden" >
                             <div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
                             <div class="form-body"><span class="error-text">Please Fill Out This Field</span>
                               <div class="form-controls">
-                                <input id="control-name" placeholder="Seu Nome"/>
-                                <input id="control-phone" placeholder="Telefone"/>
-                                <input id="control-email" placeholder="Email"/>
-                              </div>
-                            </div><a class="form-action"><i class="icon-action"></i></a>
-                          </form>
+                                {% render_field form4.name id="control-name" placeholder="Seu Nome" required="requeired" %}
+                                {% render_field form4.phone id="control-phone" placeholder="Telefone" required="requeired" %}
+                                {% render_field form4.email id="control-email" placeholder="Email" required="requeired" %}
+                              
+                                {% for error in form4.errors %}
+                                  {{ error.label }}
+                                {% endfor %}
+                            </div> 
+                          </div><a class="form-action"><i class="icon-action"></i></a><button type="submit" class="btn" type="button" style="border-radius: 80px; width: 55px">Enviar</button>
+                        </form>
                                 <!-- Botão Quero Agora -->
                                 <!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
                                 <!-- /signup button -->

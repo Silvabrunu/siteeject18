@@ -25,7 +25,8 @@ class ContactSoliciteUmaProposta(forms.Form):
 	email = forms.EmailField(label = 'Email')
 	phone = forms.CharField(label = 'Telefone',max_length=15)
 	deviceContact = forms.ChoiceField(choices= DEVICE_CHOICES, widget=forms.RadioSelect())
-	slide = forms.CharField(label='Slide', max_length=100, widget=forms.HiddenInput())
+	#slide = forms.CharField(label='Slide', max_length=100, widget=forms.HiddenInput())
+	#validacao = forms.CharField(label='validacao', widget=forms.HiddenInput())
 	# message = forms.CharField(label='Mensagem', widget=forms.Textarea)
 
 
@@ -34,4 +35,17 @@ class ContactServicoSitesResponsivos(forms.Form):
 	name = forms.CharField(label='Nome', max_length=100)
 	email = forms.EmailField(label = 'Email')
 	phone = forms.CharField(label = 'Telefone',max_length=15)
+	#validacao = forms.CharField(label='Validacao', widget=forms.HiddenInput())
 	# message = forms.CharField(label='Mensagem', widget=forms.Textarea)
+
+class ContactServicoSistemasWEB(forms.Form):
+
+	name = forms.CharField(label='Nome', max_length=100)
+	email = forms.EmailField(label = 'Email')
+	phone = forms.CharField(label = 'Telefone',max_length=15)
+
+class ContactServicoHospedagem(forms.Form):
+
+	name = forms.CharField(label='Nome', max_length=100)
+	email = forms.EmailField(label = 'Email')
+	phone = forms.CharField(label = 'Telefone',max_length=15)
