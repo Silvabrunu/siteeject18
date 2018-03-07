@@ -44,3 +44,17 @@ class Contato(forms.Form):
             return  False
 
         return True
+
+class Correio(forms.Form):
+    nome = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu Nome', 'id': 'nome'}))
+    email = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu Melhor Email', 'id': 'email'}))
+    empresa = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome da Empresa', 'id': 'empresa'}))
+
+    def persistir(self):
+        if self.is_valid():
+            try:
+                result = self.save()
+            except Exception:
+                return False
+
+        return True

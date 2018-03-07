@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from siteeject.forms import Correio
 
 class Campo(models.Model):
 	title = models.CharField('Título', max_length=100)

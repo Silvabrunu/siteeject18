@@ -280,18 +280,18 @@
 
                   <h2 class="text-center assine">Se destaque através das nossas dicas de desenvolvimento web e empreendedorismo</h2>
 
-                    <form id="contact-form"  method="post" action="sendmail.php" role="form">
-
+                    <form id="contact-form"  method="post" action="quemsomos" role="form">
+                        {% csrf_token %}
                         <div class="form-group col-md-3" style="padding-bottom: 30px">
-                            <input type="text" placeholder="Seu Nome" class="form-control" name="Nome" id="name">
+                            {{ form_correio.nome }}
                         </div>
 
                         <div class="form-group col-md-3" style="padding-bottom: 30px">
-                            <input type="email" placeholder="Seu Melhor Email" class="form-control" name="email" id="email">
+                            {{ form_correio.email }}
                         </div>
 
                         <div class="form-group col-md-3" style="padding-bottom: 30px">
-                            <input type="text" placeholder="Nome da Empresa" class="form-control" name="subject" id="subject">
+                            {{ form_correio.empresa }}
                         </div>
 
                         <div id="mail-success" class="success" class="col-md-3" style="padding-bottom: 30px">

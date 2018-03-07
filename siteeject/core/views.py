@@ -22,7 +22,12 @@ def index(request):
 
 def quem_somos(request):
     context = {
-        'quem_somos': QuemSomos.objects.all()
+        'quem_somos': QuemSomos.objects.all(),
+        'form_correio': forms.Correio()
     }
+
+    if request.method == 'POST':
+    	form = forms.Correio(request.POST)
+    	form.persistir()
 
     return render(request, 'quem-somos.html', context)
