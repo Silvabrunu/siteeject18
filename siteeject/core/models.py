@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils import timezone
-from siteeject.forms import Correio
 
 class Campo(models.Model):
 	title = models.CharField('Título', max_length=100)
@@ -45,3 +44,14 @@ class Parceiros(CampoImagem):
 
 	class Meta:
 		verbose_name_plural = 'Parceiros'
+
+class Correio(models.Model):
+	nome = models.CharField('Nome', max_length=100)
+	email = models.CharField('Email', max_length=100)
+	empresa = models.CharField('Empresa', max_length=100)
+
+	def __str__(self):
+		return self.nome
+
+	class Meta:
+		verbose_name_plural = 'Correio'

@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/form-elements.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'assets/css/style2.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style_servicos.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style2_servicos.css' %}">
 
         <!-- HTML5 Shim and Respond.js' %} IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js' %} doesn't work if you view the page via file:// -->
@@ -24,8 +24,8 @@
         <![endif]-->
 
         <!-- Favicon and touch icons -->
-      <link rel="icon" sizes="192x192" href="{% static 'assets/img/iconeject.png' %}">
-      <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}" type="image/png">
+        <link rel="icon" sizes="192x192" href="{% static 'assets/img/iconeject.png' %}">
+        <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}" type="image/png">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'assets/ico/apple-touch-icon-144-precomposed.png' %}">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'assets/ico/apple-touch-icon-114-precomposed.png' %}">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'assets/ico/apple-touch-icon-72-precomposed.png' %}">
@@ -62,27 +62,21 @@
                 <div class="row register-form">
                     <div class="col-sm-4 col-sm-offset-1">
 						<form role="form" action="" method="post" class="r-form">
+                            {% csrf_token %}
 	                    	<div class="form-group">
 	                    		<label class="sr-only" for="r-form-first-name">Seu Nome...</label>
-	                        	<input type="text" name="r-form-first-name" placeholder="Seu Nome..." class="r-form-first-name form-control" id="r-form-first-name">
+	                        	{{ form_responsivos.nome }}
 	                        </div>
 	                        <div class="form-group">
 	                        	<label class="sr-only" for="r-form-last-name">Telefone...</label>
-	                        	<input type="text" class="form-control" placeholder="Telefone" data-mask="(00) 00000-0000" maxlength="11" autocomplete="off">
+	                        	{{ form_responsivos.telefone }}
 	                        </div>
 	                        <div class="form-group">
 	                        	<label class="sr-only" for="r-form-email">Email</label>
-	                        	<input type="text" name="r-form-email" placeholder="Email..." class="r-form-email form-control" id="r-form-email">
+	                        	{{ form_responsivos.email }}
 	                        </div>
 	                        <div class="form-group">
-                            <select class="basic">
-                            <option>Qual o site que te interessa?</option>
-                            <option>Institucionais</option>    
-                            <option>Blog</option>
-                            <option>E-Commerce</option>
-                            <option>Landing Page</option>
-                            <option>Outro tipo</option>
-                            </select>
+                                {{ form_responsivos.opcoes }}
 				            </div>
                             <button id="button"></button>
 						</form>
@@ -178,6 +172,10 @@
         </footer>
 
         <!-- Javascript -->
+        <script type="text/javascript">
+            var bg_path = "{% static 'assets/img/backgrounds/1.jpg' %}";
+        </script>
+
         <script src="{% static 'assets/js/jquery-1.11.1.min.js' %}"></script>
         <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
         <script src="{% static 'assets/js/jquery.backstretch.min.js' %}"></script>
