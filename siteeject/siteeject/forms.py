@@ -8,6 +8,7 @@ class Contato(forms.Form):
     email = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu Melhor Email', 'id': 'email'}))
     assunto = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Assunto', 'id': 'subject'}))
     mensagem = forms.CharField(max_length=500, widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Mensagem', 'id': 'message', 'rows': '6'}))
+    origem = forms.CharField(max_length=100, widget=forms.HiddenInput(attrs={'value': 'FOOTER'}))
 
     def send_email(self):
         subject = self.cleaned_data['assunto']
@@ -32,7 +33,7 @@ class Contato(forms.Form):
                 </tr>
                 <tr>
                     <th>Local do formulário: </th>
-                    <td>FOOTER</td>
+                    <td>""" + self.cleaned_data['origem'] + """</td>
                 </tr>
             </table>
             """
