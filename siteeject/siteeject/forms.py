@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django import forms
 from django.core.mail import EmailMessage
 from core.models import Correio
@@ -72,36 +73,78 @@ class Servicos(forms.Form):
     telefone = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Telefone', 'id': 'telefone', 'data-mask': '(00) 00000-0000'}))
     email = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu Melhor Email', 'id': 'email'}))
 
+    def send_email(self, origem, opcao):
+        subject = "Solicitação de Orçamento"
+        message = \
+            """
+            <table>
+                <tr>
+                    <th>Nome: </th>
+                    <td>""" + self.cleaned_data['nome'] + """</td>
+                </tr>
+                <tr>
+                    <th>Telefone: </th>
+                    <td>""" + self.cleaned_data['telefone'] + """</td>
+                </tr>
+                <tr>
+                    <th>E-mail: </th>
+                    <td>""" + self.cleaned_data['email'] + """</td>
+                </tr>
+                <tr>
+                    <th>Produto: </th>
+                    <td>""" + opcao + """</td>
+                </tr>
+                <tr>
+                    <th>Local do formulário: </th>
+                    <td>""" + origem + """</td>
+                </tr>
+            </table>
+            """
+        
+        email = EmailMessage(subject, message, 'periclesgdc@gmail.com', ['periclesgdc@hotmail.com'])
+        email.content_subtype = "html"
+
+        try:
+            email.send()
+        except Exception:
+            return  False
+
+        return True
+
+
 class SitesResponsivosForm(Servicos):
     CHOICES = (
-        ('1', 'Qual o site que te interessa?'),
-        ('2', 'Institucionais'),
-        ('3', 'Blog'),
-        ('4', 'E-Commerce'),
-        ('5', 'Landing Page'),
-        ('6', 'Outro Tipo')
+        ('0', 'Qual o site que te interessa?'),
+        ('INSTITUCIONAIS', 'Institucionais'),
+        ('BLOG', 'Blog'),
+        ('E-COMMERCE', 'E-Commerce'),
+        ('LANDING PAGE', 'Landing Page'),
+        ('OUTRO TIPO', 'Outro Tipo')
     )
 
     opcoes = forms.ChoiceField(choices=CHOICES, widget=forms.Select(attrs={'class':'basic'}))
+    origem = forms.CharField(max_length=100, widget=forms.HiddenInput(attrs={'value': 'SITES RESPONSIVOS'}))
 
 class SistemasWebForm(Servicos):
     CHOICES = (
-        ('1', 'Qual o sistema que te interessa?'),
-        ('2', 'Gestão Interna'),
-        ('3', 'CRM'),
-        ('4', 'MVP'),
-        ('5', 'Controle de Eventos'),
-        ('6', 'Outro Tipo')
+        ('0', 'Qual o sistema que te interessa?'),
+        ('GESTÃO INTERNA', 'Gestão Interna'),
+        ('CRM', 'CRM'),
+        ('MVP', 'MVP'),
+        ('CONTROLE DE EVENTOS', 'Controle de Eventos'),
+        ('OUTRO TIPO', 'Outro Tipo')
     )
 
     opcoes = forms.ChoiceField(choices=CHOICES, widget=forms.Select(attrs={'class':'basic'}))
+    origem = forms.CharField(max_length=100, widget=forms.HiddenInput(attrs={'value': 'SISTEMAS WEB'}))
 
 class HospedagemForm(Servicos):
     CHOICES = (
-        ('1', 'O que te interessa?'),
-        ('2', 'Plano Anual de Hospedagem'),
-        ('3', 'E-mails Profissionais'),
-        ('4', 'Outro tipo')
+        ('0', 'O que te interessa?'),
+        ('PLANO DE HOSPEDAGEM', 'Plano Anual de Hospedagem'),
+        ('E-MAIL PROFISSIONAL', 'E-mails Profissionais'),
+        ('OUTRO TIPO', 'Outro tipo')
     )
 
     opcoes = forms.ChoiceField(choices=CHOICES, widget=forms.Select(attrs={'class':'basic'}))
+    origem = forms.CharField(max_length=100, widget=forms.HiddenInput(attrs={'value': 'HOSPEDAGEM'}))
