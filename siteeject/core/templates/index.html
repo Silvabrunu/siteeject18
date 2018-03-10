@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}">
-
+	<link href="{% static 'assets/css/load-more-button.css' %}" rel="stylesheet">
 	<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
 	<link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet">
 	<link href="{% static 'assets/css/prettyPhoto.css' %}" rel="stylesheet">
@@ -45,7 +45,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="{% static 'assets/slick.js' %}" type="text/javascript" charset="utf-8"></script>
+	<script src="{% static 'assets/slick/slick.js' %}" type="text/javascript" charset="utf-8"></script>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	<!-- CAROUSEL SLICK  - FIM -->
@@ -81,8 +81,8 @@
 		</div>
 	</div><!--End off Preloader -->
 
-	<div class="culmn">
 		<!--Home page style-->
+	<section id="home">
 		<nav class="navbar navbar-default bootsnav navbar-fixed">
 			<div class="navbar-top bg-cinzanav fix">
                 <div class="container ">
@@ -109,22 +109,10 @@
                 </div>
             </div>
 
-			<div class="container">
-				<!-- Start Header Navigation -->
-				<div class="navbar-header" style="padding-bottom: 15px">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-						<i class="fa fa-bars"></i>
-					</button>
-					<a class="navbar-brand" href="/">
-						<img src="{% static 'assets/images/logoeject.png' %}" class="logo" alt="">
-						<!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
-					</a>
-
-				</div>
-				<!-- End Header Navigation -->
-				<!-- navbar menu -->
-				<div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" style="height: 60px;">
+			<div class="container">            
+            	<!-- Start Atribute Navigation -->
+            	<div class="attr-nav">        
+					<ul class="navegacao-tela-maior">
 						<li><a href="#home" class="effect-underline">Inicio</a></li>
 						<li><a href="#features" class="effect-underline">Quem Somos</a></li>
 						<li><a href="#pricing" class="effect-underline">Serviços</a></li>
@@ -132,413 +120,286 @@
 						<li><a href="#contato" class="effect-underline">Contato</a></li>
 						<li><a href="http://ejectufrn.com.br/blog" class="effect-underline">Blog</a></li>
 						<li><a style="padding-top: 20px;" href="https://api.whatsapp.com/send?phone=5584999411273&text=Olá,%20temos%20a%20solução%20web%20para%20você!." target="."><div class="ligamos" align="center"><i class="fa fa-whatsapp"></i> Whatsapp</div></a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-			</div>
+					</ul>
+					<ul class="navegacao-tela-menor">
+						<li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+					</ul>     
+            	</div>
+	            <!-- End Atribute Navigation -->
+	            <!-- Start Header Navigation -->
+	            <div class="navbar-header" style="padding-bottom: 5px">
+	            	<a class="navbar-brand" href="#brand"><img src="{% static 'assets/images/logoeject.png' %}" class="logo" alt=""></a> 
+	            </div>
+	            <!-- End Header Navigation -->
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+        	</div>
+
+        	<!-- Start Side Menu -->
+	        <div class="side">
+	            <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+	            <div class="widget">
+	                <h3 class="title">Navegue no nosso site</h3>
+	                <ul class="link">
+	                    <li><a href="#home">Inicio</a></li>
+	                    <li><a href="#features">Quem Somos</a></li>
+	                    <li><a href="#pricing">Serviços</a></li>
+	                    <li><a href="#portfolio">Portfólio</a></li>
+	                    <li><a href="#contato">Contato</a></li>
+	                </ul>
+	            </div>
+	            <div class="widget">
+	                <h4 class="title"><a href="http://ejectufrn.com.br/blog" target="." style="color: white"> Blog #EJECT </a></h4>
+	                <ul class="link">
+	                    <li style="text-align: center; color: white; padding-bottom: 10px;">Telefone: (84) 9 9941-1273</li>
+	                    <li style="text-align: center; color: white">Endereço: Sala B412 do IMD/UFRN</li>
+	                </ul>
+	            </div>
+	            <!--<div>
+	                
+	                    <a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-facebook" ></i></a>
+	                    <a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-instagram" ></i></a>
+	                
+	            </div>-->
+	        </div>
+        <!-- End Side Menu -->
 		</nav>
+	</section>
 
-		<!--Home Sections-->
-		<section id="home" class="home bg-black fix">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="main_home text-center">
-						<div class="col-md-12">
-							<div class="hello_slid">
-								<div class="slid_item">
-									<div class="home_text col-sm-6 col-md-8 col-xs-12">
-                                        <h2 class="text-white">Bem vindo a <strong>EJECT</strong></h2>
-                                        <h3 class="text-white">Criamos a <strong>Solução Web</strong> Mais Alinhada com o Seu Negócio</h3>
-                                    </div>
+	<!--Home Sections-->
+	<div class="cd-background-wrapper">
+	    <figure class="cd-floating-background">
+	    	<img src="{% static 'assets/img/cd-img-1.jpg' %}" alt="image-1" >
+	    	<img src="{% static 'assets/img/cd-img-2.png' %}" alt="image-2">
+	    	<img src="{% static 'assets/img/cd-img-3.png' %}" alt="image-3">
+	    </figure>
+    </div>
 
-									<!-- INICIO DO FORM -->
-									<div class="col-sm-6 col-md-4 col-xs-12" align="center">
-										<div class="formulario">
-											<h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
-											<form class="form-header" action="http://moxdesign.us10.list-manage.com/subscribe/post" role="form" method="POST" id="#">
-												<input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-												<input type="hidden" name="id" value="bfdba52708">
-												<!-- SERVIÇOS-->
-												<div class="form-group">
-													<div class="input-group">
-														<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-														<select name="service" class="form-control selectpicker" >
-															<option value=" ">Selecione o serviço desejado</option>
-															<option >Sites Responsivos</option>
-															<option >Sistemas Web</option>
-															<option >Hospedagem de Dados</option>
-														</select>
-													</div>
-												</div><!-- SERVIÇOS - fim-->
-
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Nome e Sobrenome" required>
-												</div>
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="E-mail" required>
-												</div>
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE0" id="fone" type="fone" placeholder="Telefone" required>
-												</div>
-												<!-- MELHOR FORMA -->
-												<div class="form-group">
-													<label >Deseja receber contatos por:</label>
-
-													<div class="radio">
-														<label>
-															<input type="radio" name="forma_contato" value="E-mail" /> E-mail
-														</label>
-
-														<label>
-															<input type="radio" name="forma_contato" value="no" /> Telefone
-														</label>
-
-														<label>
-															<input type="radio" name="forma_contato" value="no" /> Whatsapp
-														</label>
-													</div>
-												</div>
-												<div class="form-group last">
-													<input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
-												</div>
-												<!--<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>-->
-												<!-- MELHOR FORMA -->
-											</form>
-										</div>
-										<!-- FIM DO FORM -->
-									</div>
-								</div><!-- End off slid item -->
-
-								<div class="slid_item">
-									<div class="home_text col-sm-6 col-md-8 col-xs-12">
-                                        <h2 class="text-white">Bem vindo a <strong>EJECT</strong></h2>
-                                        <h3 class="text-white">Criamos a <strong>Solução Web</strong> Mais Alinhada com o Seu Negócio</h3>
-                                    </div>
-
-									<!-- INICIO DO FORM -->
-									<div class="col-sm-6 col-md-4 col-xs-12" align="center">
-										<div class="formulario">
-											<h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
-											<form class="form-header" action="http://moxdesign.us10.list-manage.com/subscribe/post" role="form" method="POST" id="#">
-												<input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-												<input type="hidden" name="id" value="bfdba52708">
-												<!-- SERVIÇOS-->
-												<div class="form-group">
-													<div class="input-group">
-														<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-														<select name="service" class="form-control selectpicker" >
-															<option value=" " >Selecione o serviço desejado</option>
-															<option >Sites Responsivos</option>
-															<option >Sistemas Web</option>
-															<option >Hospedagem de Dados</option>
-														</select>
-													</div>
-												</div><!-- SERVIÇOS - fim-->
-
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Nome e Sobrenome" required>
-												</div>
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="E-mail" required>
-												</div>
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE0" id="fone" type="fone" placeholder="Telefone" required>
-												</div>
-												<!-- MELHOR FORMA -->
-												<div class="form-group">
-													<label >Deseja receber contatos por:</label>
-
-													<div class="radio">
-														<label>
-															<input type="radio" name="forma_contato" value="E-mail" /> E-mail
-														</label>
-
-														<label>
-															<input type="radio" name="forma_contato" value="no" /> Telefone
-														</label>
-
-														<label>
-															<input type="radio" name="forma_contato" value="no" /> Whatsapp
-														</label>
-													</div>
-												</div>
-												<div class="form-group last">
-													<input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
-												</div>
-												<!--<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>-->
-												<!-- MELHOR FORMA -->
-											</form>
-										</div>
-										<!-- FIM DO FORM -->
-									</div>
-								</div><!-- End off slid item -->
-
-								<div class="slid_item">
-									<div class="home_text col-sm-6 col-md-8 col-xs-12">
-                                        <h2 class="text-white">Bem vindo a <strong>EJECT</strong></h2>
-                                        <h3 class="text-white">Criamos a <strong>Solução Web</strong> Mais Alinhada com o Seu Negócio</h3>
-                                    </div>
-
-									<!-- INICIO DO FORM -->
-									<div class="col-sm-6 col-md-4 col-xs-12" align="center">
-										<div class="formulario">
-											<h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
-											<form class="form-header" action="http://moxdesign.us10.list-manage.com/subscribe/post" role="form" method="POST" id="#">
-												<input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-												<input type="hidden" name="id" value="bfdba52708">
-												<!-- SERVIÇOS-->
-												<div class="form-group">
-													<div class="input-group">
-														<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-														<select name="service" class="form-control selectpicker" >
-															<option value=" " >Selecione o serviço desejado</option>
-															<option >Sites Responsivos</option>
-															<option >Sistemas Web</option>
-															<option >Hospedagem de Dados</option>
-														</select>
-													</div>
-												</div><!-- SERVIÇOS - fim-->
-
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Nome e Sobrenome" required>
-												</div>
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="E-mail" required>
-												</div>
-												<div class="form-group">
-													<input class="form-control input-lg" name="MERGE0" id="fone" type="fone" placeholder="Telefone" required>
-												</div>
-												<!-- MELHOR FORMA -->
-												<div class="form-group">
-													<label >Deseja receber contatos por:</label>
-
-													<div class="radio">
-														<label>
-															<input type="radio" name="forma_contato" value="E-mail" /> E-mail
-														</label>
-
-														<label>
-															<input type="radio" name="forma_contato" value="no" /> Telefone
-														</label>
-
-														<label>
-															<input type="radio" name="forma_contato" value="no" /> Whatsapp
-														</label>
-													</div>
-												</div>
-												<div class="form-group last">
-													<input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
-												</div>
-												<!--<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>-->
-												<!-- MELHOR FORMA -->
-											</form>
-										</div>
-										<!-- FIM DO FORM -->
-									</div>
-								</div><!-- End off slid item -->
-							</div>
-						</div>
-					</div>
-				</div><!--End off row-->
-			</div><!--End off container -->
-		</section> <!--End off Home Sections-->
-
-
-		<!--Featured Section-->
-		<section id="features" class="features bg-white">
-            <div class="container ">
-                <div class="row">
-                    <div class="main_features fix roomy-70" style="padding-bottom: 23px;padding-top: 20px;">
-                        <div class="col-md-12 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                            
-                         	<h2 style="color: black">Quem Somos</h2>
-                        </div>
-                        <div class="col-md-12 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                            <p>{{ quem_somos.0.descricao }}</p>
-                        </div>
-	                	<div class="col-md-12"><a href="quemsomos" class="btn-voltar m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Veja Mais | <i class="fa fa-eye" aria-hidden="true"></i></a></div>
-                    </div>
-                </div><!-- End off row -->
-            </div><!-- End off container -->
-        </section><!-- End off Featured Section-->
-
-		<!--Seção de Serviços-->
-			<!-- Start Pricing section
-			=========================================== -->
-			<section class="pricing-table  bg-servicos section" id="pricing">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<div class="title text-center">
-								<h2 class="ajustesserver">Nossos Serviços</h2>
-								<span class="border"></span>
-								<p class="ajusteserviço">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<!-- single pricing table -->
-						<div class="col-md-4 col-sm-4 col-xs-12" >
-							<div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-								<a href="https://www.facebook.com/ejectufrn" target="_blank"><div class="post-icon">
-									<i class="fa fa-search-plus"></i></a>
-								</div>
-								<!-- plan name & value -->
-								<div class="price-title bg-pricing">
-									<h3>Sites Responsivos</h3>
-									<a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-laptop service-icon"></i></a>
-									<p>Perfeito para pessoas e empresas que querem ganhar visibilidade e presença de mercado</p>
-								</div>
-								<!-- /plan name & value -->
-
-								<!-- plan description -->
-								<ul>
-									<li>Institucionais</li>
-									<li>Landing Pages</li>
-									<li>Blogs</li>
-									<li>E-Commerce</li>
-
-								</ul>
-								<!-- /plan description -->
-
-								<form class="grop-from" id="signup">
-									<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
-									<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
-										<div class="form-controls">
-											<input id="control-name" placeholder="Seu Nome"/>
-											<input id="control-phone" placeholder="Telefone"/>
-											<input id="control-email" placeholder="Email"/>
-										</div>
-									</div><a class="form-action"><i class="icon-action"></i></a>
-								</form>
-								<!-- Botão Quero Agora -->
-								<!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
-								<!-- /signup button -->
-
-							</div>
-						</div>
-						<!-- end single pricing table -->
-
-						<!-- single pricing table -->
-						<div class="col-md-4 col-sm-4 col-xs-12"  >
-							<div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-								<a href="https://www.facebook.com/ejectufrn" target="_blank"><div class="post-icon">
-									<i class="fa fa-search-plus"></i></a>
-								</div>
-								<!-- plan name & value -->
-								<div class="price-title  bg-pricing">
-									<h3>Sistemas Web</h3>
-									<a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-sitemap service-icon"></i></a>
-									<p>Ideal para empresas que buscam melhorar os seus processos, informatizando-os e reduzindo assim custos</p>
-								</div>
-								<!-- /plan name & value -->
-
-								<!-- plan description -->
-								<ul>
-									<li>Gestão Interna</li>
-									<li>CRM</li>
-									<li>Eventos</li>
-									<li>Estoque</li>
-								</ul>
-								<!-- /plan description -->
-								<form class="grop-from" id="signup">
-									<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
-									<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
-										<div class="form-controls">
-											<input id="control-name" placeholder="Seu Nome"/>
-											<input id="control-phone" placeholder="Telefone"/>
-											<input id="control-email" placeholder="Email"/>
-										</div>
-									</div><a class="form-action"><i class="icon-action"></i></a>
-								</form>
-								<!-- Botão Quero Agora -->
-								<!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
-								<!-- /signup button -->
-
-							</div>
-						</div>
-						<!-- end single pricing table -->
-						<div class="col-md-4 col-sm-4 col-xs-12"  >
-							<div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-								<a href="https://www.facebook.com/ejectufrn" target="_blank"><div class="post-icon">
-									<i class="fa fa-search-plus"></i></a>
-								</div>
-								<!-- plan name & value -->
-								<div class="price-title  bg-pricing">
-									<h3>Hospedagem</h3>
-									<a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-cloud service-icon"></i></a>
-									<p>Armazene os seus dados e projetos com segurança, tendo-os disponiveis 24h por dia e 7 dias por semana!</p>
-								</div>
-								<!-- /plan name & value -->
-
-								<!-- plan description -->
-								<ul>
-									<li>Planos anuais</li>
-									<li>Cloud</li>
-									<li>Email</li>
-									<li>Backups</li>
-								</ul>
-								<!-- /plan description -->
-								<form class="grop-from" id="signup">
-									<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
-									<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
-										<div class="form-controls">
-											<input id="control-name" placeholder="Seu Nome"/>
-											<input id="control-phone" placeholder="Telefone"/>
-											<input id="control-email" placeholder="Email"/>
-										</div>
-									</div><a class="form-action"><i class="icon-action"></i></a>
-								</form>
-								<!-- Botão Quero Agora -->
-								<!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
-								<!-- /signup button -->
-
-							</div>
-						</div>
-						<!-- single pricing table -->
-						<!-- end single pricing table -->
-					</div>       <!-- End row -->
-				</div>      <!-- End container -->
-			</section>   <!-- End section -->
-
-<!-- CTA's dos Serviços
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-	<div class="modal-content">
-	  <div class="modal-header">
-		<h5 class="modal-title" id="exampleModalLabel">Quero agora</h5>
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-	  </div>
-	  <div class="modal-body">
-		<form>
-		  <div class="form-group">
-			<label for="recipient-name" class="col-form-label">Nome:</label>
-			<input type="text" class="form-control" id="recipient-name">
-		  </div>
-		<div class="form-group">
-			<label for="recipient-name" class="col-form-label">Email:</label>
-			<input type="text" class="form-control" id="recipient-name">
-		  </div>
-		  <div class="form-group">
-			<label for="recipient-name" class="col-form-label">Telefone:</label>
-			<input type="text" class="form-control" id="recipient-name">
-		  </div>
-		  <div class="form-group">
-			<label for="message-text" class="col-form-label">Fale um pouco sobre o seu projeto:</label>
-			<textarea class="form-control" id="message-text"></textarea>
-		  </div>
-		</form>
-	  </div>
-	  <div class="modal-footer">
-		<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-		<button type="button" class="btn btn-primary">Enviar Mensagem</button>
-	  </div>
+    <!-- CONTINUA HOME -->
+	<div class="col md-12 texto">
+		<h1 style="font-size: 36px; padding-bottom: 10px" class="col-md-12"><strong>Criação de Sites e Sistemas Web</strong></h1>
+		<p style="font-size: 20px" class="col-md-6">Empresa especializada em desenvolvimento de soluções web responsivas e personalizadas.</p>
+		<div class="col-md-12"><a href="#pricing" class="btn-home m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Conheça nossos serviços | <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
 	</div>
-  </div>
-</div>
--->
+
+	<div class="formulario form-wrap">
+		<h3 class="form-title text-center">SOLICITE UMA PROPOSTA</h3>
+		<form class="form-header" action="http://moxdesign.us10.list-manage.com/subscribe/post" role="form" method="POST" id="#">
+	        <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
+	        <input type="hidden" name="id" value="bfdba52708">
+	        <!-- SERVIÇOS-->
+	        <div class="form-group"> 
+	         	<div class="input-group">
+	            	<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+	            	<select name="service" class="form-control selectpicker" >
+	                	<option value=" ">Selecione o serviço desejado</option>
+	                    <option >Sites Responsivos</option>
+	                    <option >Sistemas Web</option>
+	                    <option >Hospedagem de Dados</option>
+	            	</select>
+	          	</div>
+	        </div><!-- SERVIÇOS - fim-->
+
+	        <div class="form-group">
+	          <input class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Nome e Sobrenome" required>
+	        </div>
+	        <div class="form-group">
+	          <input class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="E-mail" required>
+	        </div>
+	        <div class="form-group">
+	          <input class="form-control input-lg" name="MERGE0" id="fone" type="fone" placeholder="Telefone" required>
+	        </div>
+	        <!-- MELHOR FORMA -->
+	        <div class="form-group">
+	         	<label >Deseja receber contatos por:</label>
+				<div class="radio">
+					<label><input type="radio" name="forma_contato" value="E-mail" /> E-mail</label>
+					<label><input type="radio" name="forma_contato" value="no" /> Telefone</label>
+					<label><input type="radio" name="forma_contato" value="no" /> Whatsapp</label>
+				</div>
+	        </div>
+	        <div class="form-group last">
+	         	<input type="submit" class="btn btn-warning btn-block btn-lg" value="Solicitar Proposta">
+	        </div>
+	        <!--<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>-->
+	        <!-- MELHOR FORMA -->
+	    </form>
+    </div>
+
+    <div class="responsa">
+        <div class="container" style="padding-bottom: 10px">
+			<div class="row">
+				<div class="main_features fix roomy-70" style="padding-bottom: 23px;padding-top: 20px;">
+					<div class="col-md-12 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+						<h1 style="color: black;  padding-bottom: 8px; font-size: 24px;"><strong>Criação de Sites e Sistemas Web</strong></h1>
+					</div>
+					<div class="col-md-12 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+				    	<p style="font-size: 16px">Empresa especializada em desenvolvimento de soluções web responsivas e personalizadas.</p>
+					</div>
+				  	<div class="col-md-12"><a href="#pricing" class="ctahome m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Conheça nossos serviços | <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+				</div>
+			</div><!-- End off row -->
+        </div><!-- End off container -->
+    </div>
+
+	<!--Featured Section-->
+	<section id="features" class="features bg-white">
+        <div class="container ">
+            <div class="row">
+                <div class="main_features fix roomy-70" style="padding-bottom: 23px;padding-top: 20px;">
+                    <div class="col-md-12 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                        
+                     	<h2 style="color: black; padding-bottom: 8px;">Quem Somos</h2>
+                     	<div class="section-title-divider"></div>
+                    </div>
+                    <div class="col-md-12 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                        <p>{{ quem_somos.0.descricao }}</p>
+                    </div>
+                	<div class="col-md-12"><a href="quemsomos" class="voltar m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Veja Mais | <i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                </div>
+            </div><!-- End off row -->
+        </div><!-- End off container -->
+    </section><!-- End off Featured Section-->
+
+	<!--Seção de Serviços-->
+	<!-- Start Pricing section
+	=========================================== -->
+	<section class="pricing-table  bg-servicos section" id="pricing">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="title text-center">
+						<h2 class="ajustesserver" style="padding-bottom: 8px;">Nossos Serviços</h2>
+						<div class="section-title-divider-ser"></div>
+						<span class="border"></span>
+						<p class="ajusteserviço">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- single pricing table -->
+				<div class="col-md-4 col-sm-4 col-xs-12" >
+					<div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+						<a href="servicos/sitesresponsivos" target="_blank"><div class="post-icon">
+							<i class="fa fa-search-plus"></i></a>
+						</div>
+						<!-- plan name & value -->
+						<div class="price-title bg-pricing">
+							<h3>Sites Responsivos</h3>
+							<a href="servicos/sitesresponsivos" target="_blank"><i class="fa fa-laptop service-icon"></i></a>
+							<p>Perfeito para pessoas e empresas que querem ganhar visibilidade e presença de mercado para alavancar as vendas</p>
+						</div>
+						<!-- /plan name & value -->
+
+						<!-- plan description -->
+						<ul>
+							<li>Institucionais</li>
+							<li>Landing Pages</li>
+							<li>Blogs</li>
+							<li>E-Commerce</li>
+
+						</ul>
+						<!-- /plan description -->
+
+						<form class="grop-from" id="signup">
+							<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
+							<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+								<div class="form-controls">
+									<input id="control-name" placeholder="Seu Nome"/>
+									<input id="control-phone" placeholder="Telefone"/>
+									<input id="control-email" placeholder="Email"/>
+								</div>
+							</div><a class="form-action"><i class="icon-action"></i></a>
+						</form>
+						<!-- Botão Quero Agora -->
+						<!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
+						<!-- /signup button -->
+
+					</div>
+				</div>
+				<!-- end single pricing table -->
+
+				<!-- single pricing table -->
+				<div class="col-md-4 col-sm-4 col-xs-12"  >
+					<div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+						<a href="servicos/sistemasweb" target="_blank"><div class="post-icon">
+							<i class="fa fa-search-plus"></i></a>
+						</div>
+						<!-- plan name & value -->
+						<div class="price-title  bg-pricing">
+							<h3>Sistemas Web</h3>
+							<a href="servicos/sistemasweb" target="_blank"><i class="fa fa-sitemap service-icon"></i></a>
+							<p>Ideal para empresas que buscam melhorar os seus processos, informatizando-os e reduzindo assim custos</p>
+						</div>
+						<!-- /plan name & value -->
+
+						<!-- plan description -->
+						<ul>
+							<li>Gestão Interna</li>
+							<li>CRM</li>
+							<li>Eventos</li>
+							<li>Estoque</li>
+						</ul>
+						<!-- /plan description -->
+						<form class="grop-from" id="signup">
+							<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
+							<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+								<div class="form-controls">
+									<input id="control-name" placeholder="Seu Nome"/>
+									<input id="control-phone" placeholder="Telefone"/>
+									<input id="control-email" placeholder="Email"/>
+								</div>
+							</div><a class="form-action"><i class="icon-action"></i></a>
+						</form>
+						<!-- Botão Quero Agora -->
+						<!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
+						<!-- /signup button -->
+
+					</div>
+				</div>
+				<!-- end single pricing table -->
+				<div class="col-md-4 col-sm-4 col-xs-12"  >
+					<div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+						<a href="servicos/hospedagem" target="_blank"><div class="post-icon">
+							<i class="fa fa-search-plus"></i></a>
+						</div>
+						<!-- plan name & value -->
+						<div class="price-title  bg-pricing">
+							<h3>Hospedagem</h3>
+							<a href="servicos/hospedagem" target="_blank"><i class="fa fa-cloud service-icon"></i></a>
+							<p>Armazene os seus dados e projetos com segurança, tendo-os disponiveis 24h por dia e 7 dias por semana!</p>
+						</div>
+						<!-- /plan name & value -->
+
+						<!-- plan description -->
+						<ul>
+							<li>Planos anuais</li>
+							<li>Cloud</li>
+							<li>Email</li>
+							<li>Backups</li>
+						</ul>
+						<!-- /plan description -->
+						<form class="grop-from" id="signup">
+							<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
+							<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+								<div class="form-controls">
+									<input id="control-name" placeholder="Seu Nome"/>
+									<input id="control-phone" placeholder="Telefone"/>
+									<input id="control-email" placeholder="Email"/>
+								</div>
+							</div><a class="form-action"><i class="icon-action"></i></a>
+						</form>
+						<!-- Botão Quero Agora -->
+						<!--<a class="btn btn-queroagora" href="#">Quero Agora</a>-->
+						<!-- /signup button -->
+
+					</div>
+				</div>
+				<!-- single pricing table -->
+				<!-- end single pricing table -->
+			</div>       <!-- End row -->
+		</div>      <!-- End container -->
+	</section>   <!-- End section -->
+
 <!-- DIFERENCIAIS -->
 <section id="diferenciais">
 	<div>
@@ -547,7 +408,7 @@
 				<div class="col-md-8 col-md-offset-2 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
 					<div class="ajustessec">
 						<h2 style="color:white">Nossos DIFERENCIAIS</h2>
-						<p style="color: white">A EJECT é a empresa júnior de C&T, lorem ipsum, lorem ipsum, lorem ipsum ,lorem ipsum ,lorem ipsum ,lorem ipsum ,lorem ipsum lorem ipsum,lorem ipsum</p>
+						<p style="color: white">A EJECT é a empresa júnior de C&T <!-- Continuar --></p>
 					</div>
 				</div>
 
@@ -558,7 +419,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
 								<img src="{% static 'assets/images/qualidade.svg' %}" width="100px" height="100px">
 								<h2 class="fh5co-uppercase-sm" style="color: white;">Qualidade</h2>
-								<p>,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum.</p>
+								<p><!-- ,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum. --></p>
 							</div>
 
 							<!-- DIFERENCIAIS - ALTA TECNOLOGIA-->
@@ -566,7 +427,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12  center wow animated fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
 								<img src="{% static 'assets/images/tec.svg' %}" width="100px" height="100px">
 								<h2 class="fh5co-uppercase-sm" style="color: white;">Tecnologia</h2>
-								<p>Lorem ipsum, Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
+								<p><!-- Lorem ipsum, Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum --></p>
 							</div>
 
 							<!-- DIFERENCIAIS - PREÇO-->
@@ -574,7 +435,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
 								<img src="{% static 'assets/images/preco.svg' %}" width="100px" height="100px">
 								<h2 class="fh5co-uppercase-sm" style="color: white;">Preço</h2>
-								<p>Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
+								<p><!-- Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum --></p>
 							</div>
 
 							<!-- DIFERENCIAIS - COMPROMISSO-->
@@ -582,7 +443,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 center wow animated fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
 								<img src="{% static 'assets/images/compromisso.svg' %}" width="100px" height="100px">
 								<h2 class="fh5co-uppercase-sm" style="color: white;" >Compromisso</h2>
-								<p>Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum</p>
+								<p><!-- Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum --></p>
 							</div>
 						</div>
 					</div>
@@ -601,9 +462,10 @@
 
 <!--  INICIO DO PORTFOLIO-->
 <section id="portfolio">
-	<div class="container">
+	<div class="container" style=" padding-bottom: 0px">
 		<div class="center">
-			<h2>Portfolio</h2>
+			<h2 style=" padding-bottom: 0px">Portfolio</h2>
+			<div class="section-title-divider-port"></div>
 			<p class="lead">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
 		</div>
 
@@ -645,58 +507,49 @@
 		</section><!--/#portfolio-item-->
 		<!--  FIM DO PORTFOLIO-->
 		<!-- BLOG -->
-		<section id="blog">
+		<section id="blog" style="padding-bottom: 40px">
 			<div class="container">
 				<div class="row">
 					<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-						<h2>Blog</h2>
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</h3>
+						<h2 style="padding-bottom: 8px">Blog</h2>
+                        <div class="section-title-divider-blog"></div>
+						<h3><!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam --></h3>
 					</div>
 				</div>
 				<div class="blog-posts">
 					<div class="row">
 						<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-							<div class="post-thumb">
-								<a href="#"><img class="img-responsive" src="{% static 'assets/images/blog/1.jpg' %}" alt=""></a> 
-
-							</div>
 							<div class="entry-header blog-space">
-								<h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-								<span class="date">June 26, 2014</span>
+								<a href="#"><img class="img-responsive post-thumb" src="{% static 'assets/images/blog/1.jpg' %}" alt=""></a>
+								<h3 style="padding-left: 10px"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
+								<span class="date" style="padding-left: 10px">June 26, 2014</span>
 								<span class="cetagory">in <strong>Photography</strong></span>
 							</div>
 							<div class="entry-content blog-space">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+								<p style="padding-left: 10px;  padding-right: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 							</div>
 						</div>
-						<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="post-thumb">
-								<a href="#"><img class="img-responsive" src="{% static 'assets/images/blog/1.jpg' %}" alt=""></a> 
-
-							</div>
+						<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
 							<div class="entry-header blog-space">
-								<h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-								<span class="date">June 26, 2014</span>
+								<a href="#"><img class="img-responsive post-thumb" src="{% static 'assets/images/blog/1.jpg' %}" alt=""></a>
+								<h3 style="padding-left: 10px"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
+								<span class="date" style="padding-left: 10px">June 26, 2014</span>
 								<span class="cetagory">in <strong>Photography</strong></span>
 							</div>
 							<div class="entry-content blog-space">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+								<p style="padding-left: 10px;  padding-right: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 							</div>
-						</div>
-						<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
-							<div class="post-thumb">
-								<a href="#"><img class="img-responsive" src="{% static 'assets/images/blog/3.jpg' %}" alt=""></a>
-
-							</div>
+						</div><div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
 							<div class="entry-header blog-space">
-								<h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-								<span class="date">June 26, 2014</span>
+								<a href="#"><img class="img-responsive post-thumb" src="{% static 'assets/images/blog/2.jpg' %}" alt=""></a>
+								<h3 style="padding-left: 10px"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
+								<span class="date" style="padding-left: 10px">June 26, 2014</span>
 								<span class="cetagory">in <strong>Photography</strong></span>
 							</div>
 							<div class="entry-content blog-space">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+								<p style="padding-left: 10px;  padding-right: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 							</div>
-						</div>                    
+						</div>                   
 					</div>
 				</div>
 			</div>
@@ -736,7 +589,8 @@
 		<!-- SLICK Carousel -->
 
 		<section id="parceiros">
-			<h2 align="center"> Nossos PARCEIROS </h2>
+			<h2 align="center" style="padding-bottom:  10px"> Nossos PARCEIROS </h2>
+            <div class="section-title-divider-partners"></div>
 
 			<div class="row">
 				<div class="container">
@@ -749,46 +603,43 @@
 			</div>
 		</section>
 		<!-- SLICK Carousel - FIM -->
-				  <!-- Srart Contact Us
-				  =========================================== -->
-				  <section id="contato" class="bg-azultop fix">
-				  	<div class="container">
-				  		<div class="row">
-				  			<div class="col-md-12">
-				  				<div class="title text-center">
+		<!-- Srart Contact Us
+		=========================================== -->
+		<section id="contato" class="bg-azultop fix">
+		  	<div class="container">
+		  		<div class="row">
+		  			<div class="col-md-12">
+		  				<div class="title text-center">
+		  					<h2 style="color:white">Entre em contato</h2>
+		  					<span class="border"></span>
+		  				</div>
+		  			</div>
+		  		</div>
+		  	</div>
+		  	<div class="container">
+		  		<div class="row" style="padding-bottom: 25px">
+		  			<!-- Contact Details -->
+		  			<div class="col-md-6">
+		  				<div class="contact-info wow fadeInUp" style="padding-bottom: 10px" data-wow-duration="1000ms" data-wow-delay="300ms">
+		  					<p>Nossa sede está localizada no Instituto Metrópole Digital (IMD - UFRN), sala B412 (4° piso)</p>
+		  					<ul class="address">
+		  						<li style="padding-bottom: 3px"><i class="fa fa-map-marker"></i> <span> Endereço:</span> Av. Capitão Mor. Gouvéia, Lagoa Nova, CEP: 59075-050 </li>
+		  						<li style="padding-bottom: 3px"><i class="fa fa-phone"></i> <span> Telefone:</span> +55 (84) 3342-2216 Ramal 206 </li>
+		  						<li style="padding-bottom: 3px"><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:contato@ejectufrn.com.br"> contato@ejectufrn.com.br</a></li>
+		  					</ul>
+		  				</div>
 
-				  					<h2 style="color:white">Entre em contato</h2>
-				  					<span class="border"></span>
-				  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
-				  				</div>
-				  			</div>
-				  		</div>
-				  	</div>
-				  	<div class="container">
-				  		<div class="row">
-				  			<!-- Contact Details -->
-				  			<div class="col-md-6">
-				  				<div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-				  					<p>Nossa sede está localizada no Instituto Metrópole Digital (IMD - UFRN), sala B412 (4° piso)</p>
-				  					<ul class="address">
-				  						<li><i class="fa fa-map-marker"></i> <span> Endereço:</span> Av. Capitão Mor. Gouvéia, Lagoa Nova, CEP: 59075-050 </li>
-				  						<li><i class="fa fa-phone"></i> <span> Telefone:</span> +55 (84) 3342-2216 Ramal 206 </li>
-				  						<li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:contato@ejectufrn.com.br"> contato@ejectufrn.com.br</a></li>
-				  					</ul>
-				  				</div>
-
-				  				<div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
-				  			</div>
-
-					<!--<div class="map">
-						<div id="map"></div>
-					</div>-->
+		  				<div class="col-md-12 google-maps">
+		  					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15876.661590476922!2d-35.2054833!3d-5.8322932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x85af869d288f334e!2sEmpresa+J%C3%BAnior+da+Escola+de+Ci%C3%AAncias+e+Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1520308069690" width="350" height="290" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+		  			</div>
 
 					<!-- / End Contact Details -->
 
 
 					<!-- Contact Form -->
 					<div class="contact-form col-md-6">
+						<p style="padding-top: 35px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
 						<form id="contact-form" method="post" role="form">
 							{% csrf_token %}
 							<div class="form-group">
@@ -871,6 +722,9 @@
 		<script src="{% static 'assets/js/vendor/jquery-1.11.2.min.js' %}"></script>
 		<script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
 
+		<!-- Scripts do home -->
+        <script src="{% static 'assets/js/modernizr.js' %}"></script> <!-- Modernizr -->
+        <script src="{% static 'assets/js/mains.js' %}"></script> <!-- Resource jQuery -->
 
 		<script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
 		<script src="{% static 'assets/js/jquery.easing.1.3.js' %}"></script>
@@ -896,11 +750,10 @@
 	<script src="{% static 'assets/js/2wow.min.js' %}"></script>
 
 	<script  src="{% static 'assets/js/oneline.js' %}"></script>
+	<script  src="{% static 'assets/js/onelinesistemas.js' %}"></script>
 
 	<!-- Slick -->
 	<script src="{% static 'assets/slick.min.js' %}" type="text/javascript" charset="utf-8"></script>
-
-	<script src="{% static 'assets/js/particles.js' %}"></script>
 	<script src="{% static 'assets/js/app.js' %}"></script>
 
 	<script type="text/javascript">

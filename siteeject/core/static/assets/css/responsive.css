@@ -103,6 +103,11 @@ Author URI: http://www.xpeedstudio.com
 }
 
 
+@media screen and (max-width: 767px) {
+  .main_home .home_text {
+    padding-bottom: 20px;
+  }
+}
 
 
 /* Landscape phones and smaller */

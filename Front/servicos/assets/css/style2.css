@@ -19,8 +19,8 @@ button {
   text-align: center;
   width: 130px;
   border-radius: 40px;
-  background: #00e8ff;
-  border: 2px solid #00e8ff;
+  background: #3c92ca;
+  border: 2px solid #3c92ca;
   color: #fff;
   letter-spacing: 1px;
   text-shadow: 0;
@@ -32,8 +32,8 @@ button {
 }
 button:hover {
   color: white;
-  background: #0accdf;
-  border-color: #0accdf;
+  background: #1a9aee;
+  border-color: #1a9aee;
 }
 button:active {
   letter-spacing: 2px;
