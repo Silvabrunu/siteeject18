@@ -21,5 +21,6 @@ from siteeject import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('core.urls', namespace='core')),
-    url(r'^servicos/', include('servicos.urls', namespace='servicos'))
+    url(r'^servicos/', include('servicos.urls', namespace='servicos')),
+    url(r'^blog/', include('blog.urls', namespace='blog'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

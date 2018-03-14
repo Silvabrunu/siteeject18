@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'servicos',
+    'blog',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -124,10 +127,14 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = '/static/'
 
+CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'core/static'),
     os.path.join(BASE_DIR, 'servicos/static'),
-    #os.path.join(BASE_DIR, 'blog/static')
+    os.path.join(BASE_DIR, 'blog/static')
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'siteeject/media')
