@@ -9,7 +9,6 @@ class Contato(forms.Form):
     email = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu Melhor Email', 'id': 'email'}))
     assunto = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Assunto', 'id': 'subject'}))
     mensagem = forms.CharField(max_length=500, widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Mensagem', 'id': 'message', 'rows': '6'}))
-    origem = forms.CharField(max_length=100, widget=forms.HiddenInput(attrs={'value': 'FOOTER'}))
 
     def send_email(self):
         subject = self.cleaned_data['assunto']
@@ -148,3 +147,42 @@ class HospedagemForm(Servicos):
 
     opcoes = forms.ChoiceField(choices=CHOICES, widget=forms.Select(attrs={'class':'basic'}))
     origem = forms.CharField(max_length=100, widget=forms.HiddenInput(attrs={'value': 'HOSPEDAGEM'}))
+
+class ContactSoliciteUmaProposta(forms.Form):
+    ABOUT_CHOICES = (
+        ("Selecione o serviço desejado", "Selecione o serviço desejado"),
+        ("Sites responsivos", "Sites Responsivos"),
+        ("Sistema Web", "Sistema Web"),
+        ("Hospedagem de Dados", "Hospedagem de Dados"),
+    )
+
+    DEVICE_CHOICES = (
+        ("Email", "Email"),
+        ("Telefone", "Telefone"),
+        ("Whatsapp", "Whatsapp"),
+    )
+
+    about = forms.ChoiceField(choices=ABOUT_CHOICES, widget=forms.Select(attrs={'class': 'form-control selectpicker', 'id': 'about'}))
+    name = forms.CharField(label='Nome', max_length=100, widget=forms.TextInput(attrs={'class': 'form-control input-lg', 'placeholder': 'Nome e Sobrenome', 'id': 'name', 'required': 'required'}))
+    email = forms.EmailField(label = 'Email', widget=forms.EmailInput(attrs={'class': 'form-control input-lg', 'placeholder': 'E-mail', 'id': 'email', 'required': 'required'}))
+    phone = forms.CharField(label = 'Telefone',max_length=15, widget=forms.TextInput(attrs={'class': 'form-control input-lg', 'placeholder': 'Telefone', 'id': 'phone', 'required': 'required'}))
+    deviceContact = forms.ChoiceField(choices= DEVICE_CHOICES, widget=forms.RadioSelect())
+
+
+class ContactServicoSitesResponsivos(forms.Form):
+
+    name = forms.CharField(label='Nome', max_length=100, widget=forms.TextInput(attrs={'class': 'control-name', 'placeholder': 'Seu Nome'}))
+    email = forms.EmailField(label = 'Email', widget=forms.EmailInput(attrs={'class': 'control-email', 'placeholder': 'E-mail'}))
+    phone = forms.CharField(label = 'Telefone',max_length=15, widget=forms.EmailInput(attrs={'class': 'control-phone', 'placeholder': 'Telefone'}))
+
+class ContactServicoSistemasWEB(forms.Form):
+
+    name = forms.CharField(label='Nome', max_length=100, widget=forms.TextInput(attrs={'class': 'control-name', 'placeholder': 'Seu Nome'}))
+    email = forms.EmailField(label = 'Email', widget=forms.EmailInput(attrs={'class': 'control-email', 'placeholder': 'E-mail'}))
+    phone = forms.CharField(label = 'Telefone',max_length=15, widget=forms.EmailInput(attrs={'class': 'control-phone', 'placeholder': 'Telefone'}))
+
+class ContactServicoHospedagem(forms.Form):
+
+    name = forms.CharField(label='Nome', max_length=100, widget=forms.TextInput(attrs={'class': 'control-name', 'placeholder': 'Seu Nome'}))
+    email = forms.EmailField(label = 'Email', widget=forms.EmailInput(attrs={'class': 'control-email', 'placeholder': 'E-mail'}))
+    phone = forms.CharField(label = 'Telefone',max_length=15, widget=forms.EmailInput(attrs={'class': 'control-phone', 'placeholder': 'Telefone'}))

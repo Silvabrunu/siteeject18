@@ -1,26 +1,24 @@
 $('.form-head').click(function(){
-  
-    if($(this).closest('.grop-from').attr('id')=='signup'){
-        $('.grop-from').attr('id' , 'name');
-        $('.icon-action').addClass('back');
-    }  
-    else if($(this).closest('.grop-from').attr('id')=='success'){
-          $('.grop-from').attr('id' , 'signup');
-          $('input').val('');
-    }
+  var  id = $(this).closest('.grop-from.signup').attr('id');
+  var id_array = ['signup_responsivos', 'signup_web', 'signup_hospedagem'];
+  var index = $.inArray(id, id_array);
+
+  if(index >= 0) {
+      $('.grop-from#'+id_array[index]).attr('id' , 'name');
+      $(this).children('.icon-action').addClass('back');
+  } else if($(this).closest('.grop-from').attr('id')=='success'){
+        $('.grop-from').attr('id' , 'signup');
+        $('input').val('');
+  }
     
 });
 
-
-
-
-
 $('.form-action').click(function(){
  
-    var form_id = $('.grop-from').attr('id');
-      $('.icon-action').addClass('back');
+    var form_id = $(this).closest('.grop-from.signup').attr('id');
+    $('.icon-action').addClass('back');
   
-    if($('#control-' + form_id).val() != ''){
+    if($('.control-' + form_id).val() != ''){
       switch (form_id) {
           case 'name':
               form_id = "phone";

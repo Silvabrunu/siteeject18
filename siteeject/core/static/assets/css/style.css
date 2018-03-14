@@ -2430,7 +2430,7 @@ font-family: 'Roboto', sans-serif;
 
 .contact-form textarea.form-control {
   padding: 10px;
-  height: 120px !important;
+  height: 160px !important;
   outline: none;
 }
 

@@ -114,30 +114,30 @@ body {
   font-size: 40px;
   line-height: 70px;
 }
-.grop-from#signup {
+.grop-from.signup {
   color: #fff;
 }
-.grop-from#signup .form-head {
+.grop-from.signup .form-head {
   width: 100%;
 }
-.grop-from#signup .form-head .icon-placeholder {
+.grop-from.signup .form-head .icon-placeholder {
   display: none;
 }
-.grop-from#signup .form-head .text {
+.grop-from.signup .form-head .text {
   display: block;
 }
-.grop-from#signup .form-head .text:before {
+.grop-from.signup .form-head .text:before {
   content: 'Quero Agora';
   font-size: 20px;
 
 }
-.grop-from#signup .form-action {
+.grop-from.signup .form-action {
 
   left: 170px;
   background: none;
   line-height: 65px;
 }
-.grop-from#signup .form-action .icon-action.back {
+.grop-from.signup .form-action .icon-action.back {
   -webkit-transform: rotate(0);
   transform: rotate(0);
 }
