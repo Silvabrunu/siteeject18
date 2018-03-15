@@ -18,7 +18,11 @@ a, a:hover, a:focus {
 }
 
 h1, h2 {
+<<<<<<< HEAD
 	margin-top: 10px;
+=======
+	margin-top: 0px;
+>>>>>>> 73e2f44b8bcb4abeb953bb78e59ab0879453cde5
 	font-size: 34px;
     font-weight: 100;
     color: #555;
@@ -59,15 +63,26 @@ img { max-width: 100%; }
 
 /***** Top content *****/
 
+<<<<<<< HEAD
 .top-content { padding: 30px 0 30px 0; }
 .top-content .text { color: #fff; }
 .top-content .text h1 { color: #fff; }
 .top-content .description { margin: 20px 0 10px 0; }
+=======
+.top-content { padding: 0px 0 0px 0; }
+.top-content .text { color: #fff; }
+.top-content .text h1 { color: #fff; }
+.top-content .description { margin: 10px 0 10px 0; }
+>>>>>>> 73e2f44b8bcb4abeb953bb78e59ab0879453cde5
 .top-content .description a { color: #fff; border-bottom: 1px dotted #fff; }
 .top-content .description a:hover, 
 .top-content .description a:focus { border: 0; }
 
+<<<<<<< HEAD
 .show-forms { padding-top: 40px; font-size: 20px; color: #fff; line-height: 26px; text-align: left; }
+=======
+.show-forms { padding-top: 0px; font-size: 20px; color: #fff; line-height: 26px; text-align: left; }
+>>>>>>> 73e2f44b8bcb4abeb953bb78e59ab0879453cde5
 .show-register-form, .show-forms-divider, .show-login-form { opacity: 0.6; }
 .show-register-form, .show-login-form {
 	cursor: pointer;
@@ -112,12 +127,20 @@ width: 50px;
 
 /***** Footer *****/
 
+<<<<<<< HEAD
 footer { padding-bottom: 30px; color: #fff; }
+=======
+footer { padding-bottom: 15px; color: #fff; }
+>>>>>>> 73e2f44b8bcb4abeb953bb78e59ab0879453cde5
 
 footer .footer-border {
 	width: 200px;
 	margin: 0 auto;
+<<<<<<< HEAD
 	padding-bottom: 30px;
+=======
+	padding-bottom: 10px;
+>>>>>>> 73e2f44b8bcb4abeb953bb78e59ab0879453cde5
 	border-top: 1px solid #fff;
 	border-top: 1px solid rgba(255, 255, 255, 0.6);
 }

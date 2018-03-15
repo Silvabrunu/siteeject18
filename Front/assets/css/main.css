@@ -13,6 +13,53 @@ body > section {
   font-weight: 400;
 }
 
+<<<<<<< HEAD
+=======
+.section-quem{
+
+
+}
+
+.section-quem {
+    margin-top: 20px;
+    width: 160px;
+    height: 3px;
+    background: #f2f2f2;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.section-quem:hover {
+        -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    margin-top: 20px;
+    width: 130px;
+    height: 3px;
+    background: #fff;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.section-mission {
+    margin-top: 20px;
+    width: 120px;
+    height: 3px;
+    background: #f2f2f2;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.section-mission:hover {
+        -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    margin-top: 20px;
+    width: 100px;
+    height: 3px;
+    background: #fff;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+>>>>>>> 73e2f44b8bcb4abeb953bb78e59ab0879453cde5
 
 
 /*************************
