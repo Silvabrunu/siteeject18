@@ -114,92 +114,92 @@ body {
   font-size: 40px;
   line-height: 70px;
 }
-.grop-from#signup {
+.grop-from.signup {
   color: #fff;
 }
-.grop-from#signup .form-head {
+.grop-from.signup .form-head {
   width: 100%;
 }
-.grop-from#signup .form-head .icon-placeholder {
+.grop-from.signup .form-head .icon-placeholder {
   display: none;
 }
-.grop-from#signup .form-head .text {
+.grop-from.signup .form-head .text {
   display: block;
 }
-.grop-from#signup .form-head .text:before {
+.grop-from.signup .form-head .text:before {
   content: 'Quero Agora';
   font-size: 20px;
 
 }
-.grop-from#signup .form-action {
+.grop-from.signup .form-action {
 
   left: 170px;
   background: none;
   line-height: 65px;
 }
-.grop-from#signup .form-action .icon-action.back {
+.grop-from.signup .form-action .icon-action.back {
   -webkit-transform: rotate(0);
   transform: rotate(0);
 }
-.grop-from#success {
+.grop-from.success {
   color: #fff;
 }
-.grop-from#success .form-head {
+.grop-from.success .form-head {
   width: 100%;
   background: #00E676;
 }
-.grop-from#success .form-head .icon-placeholder {
+.grop-from.success .form-head .icon-placeholder {
   display: none;
 }
-.grop-from#success .form-head .text {
+.grop-from.success .form-head .text {
   display: block;
 }
-.grop-from#success .form-head .text:before {
+.grop-from.success .form-head .text:before {
   content: 'Enviado!';
 }
-.grop-from#success .form-action {
+.grop-from.success .form-action {
   right: 30px;
   background: none;
   line-height: 65px;
 }
-.grop-from#success .form-action .icon-action.back {
+.grop-from.success .form-action .icon-action.back {
   -webkit-transform: rotate(0);
   transform: rotate(0);
 }
-.grop-from#success .form-action .icon-action:after {
+.grop-from.success .form-action .icon-action:after {
   content: 'mood';
 }
-.grop-from#name {
+.grop-from.name {
   color: #9C27B0;
 }
-.grop-from#name .form-head {
+.grop-from.name .form-head {
   background: #9C27B0;
 }
-.grop-from#name .form-head .icon-placeholder:after {
+.grop-from.name .form-head .icon-placeholder:after {
   content: 'face';
 }
-.grop-from#phone {
+.grop-from.phone {
   color: #009688;
 }
-.grop-from#phone .form-head {
+.grop-from.phone .form-head {
   background: #009688;
 }
-.grop-from#phone .form-head .icon-placeholder:after {
+.grop-from.phone .form-head .icon-placeholder:after {
   content: 'phone';
 }
-.grop-from#phone .form-body .form-controls {
+.grop-from.phone .form-body .form-controls {
   top: -70px;
 }
-.grop-from#email {
+.grop-from.email {
   color: #039BE5;
 }
-.grop-from#email .form-head {
+.grop-from.email .form-head {
   background: #039BE5;
 }
-.grop-from#email .form-head .icon-placeholder:after {
+.grop-from.email .form-head .icon-placeholder:after {
   content: 'mail_outline';
 }
-.grop-from#email .form-body .form-controls {
+.grop-from.email .form-body .form-controls {
   top: -140px;
 }
 .grop-from#password {

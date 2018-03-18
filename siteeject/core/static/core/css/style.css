@@ -448,7 +448,7 @@ BLOG
 
 
 /*
-    PREÇO
+    PREÃ‡O
 ------------------------------------------*/
 .service-icon {
     font-size: 40px;
@@ -539,7 +539,7 @@ BLOG
   font-weight: 400;
   line-height: 18px;
   margin-top: 5px;
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
 }
 
@@ -664,14 +664,6 @@ section { overflow: hidden; }
   border-radius: 2px;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
-}
-
-@media screen and (min-width: 768px){
-
-.ctahome{
-  display: none;
-}
-
 }
 
 .btn-menor{
@@ -1162,7 +1154,7 @@ color: white;
 }
 
   /*
-  Botão veja
+  BotÃ£o veja
 */
 
 .voltar{
@@ -1835,21 +1827,36 @@ Home Section style
 
 .formulario{
 
-    background-color: rgba(192,192,192, 0.8);
+    background-color: rgba(255,255,255, 0.8);
     max-width: 320px;
     border-radius: 10px;
     padding: 10px 20px 10px 20px;
+    position: absolute;
+    left: 925px;
+    top: 180px;
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1299px) {
   .formulario {
     display: none;
+
   }
 }
-/*
-NAV BAR
-*/
+
+@media screen and (max-width: 1024px) {
+  .formulario {
+        max-width: 320px;
+
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .btn-menor{
+    display: none;
+
+  }
+}
 
 /*
 NAV BAR
@@ -2464,14 +2471,14 @@ font-family: 'Roboto', sans-serif;
   background-color: #FFBABA;
 }
 
-.success {
+/*.success {
   background-color: #6cb670;
   border-radius: 4px;
   color: #fff;
   display: none;
   font-size: 13px;
   padding: 10px;
-}
+}*/
 
 .map {
   position: relative;
@@ -2601,7 +2608,7 @@ text-align: center;
 color: #26485c;
 }
 
-.ajusteserviço{
+.ajusteserviÃ§o{
 
 padding-bottom: 40px;
 text-align: center;

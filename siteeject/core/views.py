@@ -104,7 +104,7 @@ def index(request):
 		form_contato = forms.Contato(request.POST)
 
 		if form_contato.is_valid():
-			context['enviado'] = form_contato.send_email()
+			success = form_contato.send_email('FOOTER HOME')
 
 	context = {
 		'form_solicitacao': form,
@@ -124,11 +124,15 @@ def index(request):
 def quem_somos(request):
 	context = {
 		'quem_somos': QuemSomos.objects.all(),
-		'form_correio': forms.CorreioForm()
+		'form_contato': forms.Contato()
 	}
 
 	if request.method == 'POST':
-		form = forms.CorreioForm(request.POST)
-		form.persistir()
+		# form = forms.CorreioForm(request.POST)
+		# form.persistir()
+		form_contato = forms.Contato(request.POST)
+
+		if form_contato.is_valid():
+			context['enviado'] = form_contato.send_email('FOOTER QUEM SOMOS')
 
 	return render(request, 'quem-somos.html', context)

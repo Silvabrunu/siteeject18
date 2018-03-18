@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from django.core.mail import EmailMessage
+from siteeject import settings
 from core.models import Correio
 
 class Contato(forms.Form):
@@ -10,7 +11,7 @@ class Contato(forms.Form):
     assunto = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Assunto', 'id': 'subject'}))
     mensagem = forms.CharField(max_length=500, widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Mensagem', 'id': 'message', 'rows': '6'}))
 
-    def send_email(self):
+    def send_email(self, origem):
         subject = self.cleaned_data['assunto']
         message = \
             """
@@ -33,12 +34,12 @@ class Contato(forms.Form):
                 </tr>
                 <tr>
                     <th>Local do formulário: </th>
-                    <td>""" + self.cleaned_data['origem'] + """</td>
+                    <td>""" + origem + """</td>
                 </tr>
             </table>
             """
 
-        email = EmailMessage(subject, message, 'periclesgdc@gmail.com', ['periclesgdc@hotmail.com'])
+        email = EmailMessage(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.DEFAULT_FROM_EMAIL])
         email.content_subtype = "html"
         try:
             email.send()
@@ -72,7 +73,7 @@ class Servicos(forms.Form):
     telefone = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Telefone', 'id': 'telefone', 'data-mask': '(00) 00000-0000'}))
     email = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu Melhor Email', 'id': 'email'}))
 
-    def send_email(self, origem, opcao):
+    def send_email(self):
         subject = "Solicitação de Orçamento"
         message = \
             """
@@ -91,16 +92,16 @@ class Servicos(forms.Form):
                 </tr>
                 <tr>
                     <th>Produto: </th>
-                    <td>""" + opcao + """</td>
+                    <td>""" + elf.cleaned_data['opcoes'] + """</td>
                 </tr>
                 <tr>
                     <th>Local do formulário: </th>
-                    <td>""" + origem + """</td>
+                    <td>""" + elf.cleaned_data['origem'] + """</td>
                 </tr>
             </table>
             """
         
-        email = EmailMessage(subject, message, 'periclesgdc@gmail.com', ['periclesgdc@hotmail.com'])
+        email = EmailMessage(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.DEFAULT_FROM_EMAIL])
         email.content_subtype = "html"
 
         try:
