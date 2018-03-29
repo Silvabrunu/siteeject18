@@ -73,7 +73,7 @@ class Servicos(forms.Form):
     telefone = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Telefone', 'id': 'telefone', 'data-mask': '(00) 00000-0000'}))
     email = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu Melhor Email', 'id': 'email'}))
 
-    def send_email(self):
+    def send_email(self, origem, opcoes):
         subject = "Solicitação de Orçamento"
         message = \
             """
@@ -92,11 +92,11 @@ class Servicos(forms.Form):
                 </tr>
                 <tr>
                     <th>Produto: </th>
-                    <td>""" + elf.cleaned_data['opcoes'] + """</td>
+                    <td>""" + opcoes + """</td>
                 </tr>
                 <tr>
                     <th>Local do formulário: </th>
-                    <td>""" + elf.cleaned_data['origem'] + """</td>
+                    <td>""" + origem + """</td>
                 </tr>
             </table>
             """
