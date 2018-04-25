@@ -64,6 +64,8 @@
 	<!--Theme Responsive css-->
 	<link rel="stylesheet" href="{% static 'core/css/responsive.css' %}" />
 
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -91,7 +93,7 @@
 								<ul class="list-inline">
 									<li><a href="" style="color: black;"><i class="fa fa-envelope-o" style="color: black;">
 
-									</i style="padding-top: 30px"> contato@ejectufrn.com.br</a></li>
+									</i style="padding-top: 30px; font-family: Delicious !important;"> contato@ejectufrn.com.br</a></li>
 								</ul>
 							</div>
 						</div>
@@ -176,7 +178,7 @@
 	    <!-- CONTINUA HOME -->
 	    <div class="col md-12 texto">
 	    	<h1 style="font-size: 36px; padding-bottom: 10px" class="col-md-12"><strong>Criação de Sites e Sistemas Web</strong></h1>
-	    	<p style="font-size: 20px" class="col-md-6">Empresa especializada em desenvolvimento de soluções web responsivas e personalizadas.</p>
+	    	<p style="font-size: 20px; line-height: 30px;" class="col-md-6">Empresa especializada em desenvolvimento de soluções web responsivas e personalizadas.</p>
 	    	<div class="col-md-12"><a href="#pricing" class="btn-home m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Conheça nossos serviços | <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
 	    </div>
 
@@ -248,7 +250,7 @@
 						<div class="section-title-divider"></div>
 					</div>
 					<div class="col-md-12 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-						<p>{{ quem_somos.0.descricao }}</p>
+						<p align="justify">{{ quem_somos.0.descricao }}</p>
 					</div>
 					<div class="col-md-12"><a href="quemsomos" class="voltar m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Veja Mais | <i class="fa fa-eye" aria-hidden="true"></i></a></div>
 				</div>
@@ -267,7 +269,7 @@
 						<h2 class="ajustesserver" style="padding-bottom: 8px;">Nossos Serviços</h2>
 						<div class="section-title-divider-ser"></div>
 						<span class="border"></span>
-						<p class="ajusteserviço">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
+						<!--<p class="ajusteserviço" align="justify">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>-->
 					</div>
 				</div>
 			</div>
@@ -281,8 +283,9 @@
 						<!-- plan name & value -->
 						<div class="price-title bg-pricing">
 							<h3>Sites Responsivos</h3>
+              <br>
 							<a href="servicos/sitesresponsivos" target="_blank"><i class="fa fa-laptop service-icon"></i></a>
-							<p>Perfeito para pessoas e empresas que querem ganhar visibilidade e presença de mercado para alavancar as vendas</p>
+							<p>Solução perfeita para pessoas e empresas que querem ganhar visibilidade e presença de mercado para alavancar suas vendas.</p>
 						</div>
 						<!-- /plan name & value -->
 
@@ -299,7 +302,7 @@
 						<form class="grop-from signup" id="signup_responsivos">
 							{% csrf_token %}
 							<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
-							<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+							<div class="form-body"><span class="error-text">Por favor, preencha os campos.</span>
 								<div class="form-controls">
 									{{ form_servico_responsivo.name }}
 									{{ form_servico_responsivo.phone }}
@@ -324,8 +327,9 @@
 						<!-- plan name & value -->
 						<div class="price-title  bg-pricing">
 							<h3>Sistemas Web</h3>
+              <br>
 							<a href="servicos/sistemasweb" target="_blank"><i class="fa fa-sitemap service-icon"></i></a>
-							<p>Ideal para empresas que buscam melhorar os seus processos, informatizando-os e reduzindo assim custos</p>
+							<p>Ideal para empresas que buscam melhorar os seus processos, informatizando-os e reduzindo assim custos.</p>
 						</div>
 						<!-- /plan name & value -->
 
@@ -340,7 +344,7 @@
 						<form class="grop-from signup" id="signup_web">
 							{% csrf_token %}
 							<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
-							<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+							<div class="form-body"><span class="error-text">Por favor, preencha os campos.</span>
 								<div class="form-controls">
 									{{ form_servico_sistema_web.name }}
 									{{ form_servico_sistema_web.phone }}
@@ -363,8 +367,9 @@
 						<!-- plan name & value -->
 						<div class="price-title  bg-pricing">
 							<h3>Hospedagem</h3>
+              <br>
 							<a href="servicos/hospedagem" target="_blank"><i class="fa fa-cloud service-icon"></i></a>
-							<p>Armazene os seus dados e projetos com segurança, tendo-os disponiveis 24h por dia e 7 dias por semana!</p>
+							<p>Recomendado para quem quer armazenar os seus dados e projetos com segurança, tendo-os disponíveis 24h por dia e 7 dias por semana!</p>
 						</div>
 						<!-- /plan name & value -->
 
@@ -379,7 +384,7 @@
 						<form class="grop-from signup" id="signup_hospedagem">
 							{% csrf_token %}
 							<div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
-							<div class="form-body"><span class="error-text">Please Fill Out This Field</span>
+							<div class="form-body"><span class="error-text">Por favor, preencha os campos.</span>
 								<div class="form-controls">
 									{{ form_servico_hospedagem.name }}
 									{{ form_servico_hospedagem.phone }}
@@ -407,7 +412,7 @@
 					<div class="col-md-8 col-md-offset-2 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
 						<div class="ajustessec">
 							<h2 style="color:white">Nossos DIFERENCIAIS</h2>
-							<p style="color: white">A EJECT é a empresa júnior de C&T <!-- Continuar --></p>
+							
 						</div>
 					</div>
 
@@ -463,7 +468,7 @@
 	<section id="portfolio">
 		<div class="container" style=" padding-bottom: 0px">
 			<div class="center">
-				<h2 style=" padding-bottom: 0px">Portfolio</h2>
+				<h2 style=" padding-bottom: 0px">Portfólio</h2>
 				<div class="section-title-divider-port"></div>
 				<p class="lead">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
 			</div>
@@ -486,7 +491,7 @@
 					{% endif %}
 					col-xs-12 col-sm-4 col-md-4">
 					<div class="recent-work-wrap">
-						<img class="img-responsive" src="{{ item.imagem.url }}" alt="">
+						<img class="img-responsive" src="{{ item.imagem.url }}" alt="" style="height: 250px !important">
 						<div class="overlay">
 							<div class="recent-work-inner">
 								<h3><a>{{ item.titulo }}</a></h3>
@@ -620,11 +625,11 @@
 					<!-- Contact Details -->
 					<div class="col-md-6">
 						<div class="contact-info wow fadeInUp" style="padding-bottom: 10px" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<p>Nossa sede está localizada no Instituto Metrópole Digital (IMD - UFRN), sala B412 (4° piso)</p>
+							<p>Instituto Metrópole Digital (IMD - UFRN), sala B412 (4° piso)</p>
 							<ul class="address">
-								<li style="padding-bottom: 3px"><i class="fa fa-map-marker"></i> <span> Endereço:</span> Av. Capitão Mor. Gouvéia, Lagoa Nova, CEP: 59075-050 </li>
-								<li style="padding-bottom: 3px"><i class="fa fa-phone"></i> <span> Telefone:</span> +55 (84) 3342-2216 Ramal 206 </li>
-								<li style="padding-bottom: 3px"><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:contato@ejectufrn.com.br"> contato@ejectufrn.com.br</a></li>
+								<li style="padding-bottom: 10px"><i class="fa fa-map-marker"></i> <span> Endereço:</span> Av. Capitão Mor. Gouvéia, Lagoa Nova, CEP: 59075-050 </li>
+								<li style="padding-bottom: 10px"><i class="fa fa-phone"></i> <span> Telefone:</span> +55 (84) 3342-2216 Ramal 206 </li>
+								<li style="padding-bottom: 10px"><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:contato@ejectufrn.com.br"> contato@ejectufrn.com.br</a></li>
 							</ul>
 						</div>
 
@@ -705,7 +710,7 @@
 
 
 					<font color="black"><p class="rodape wow fadeInRight" data-wow-duration="1s">
-						Feito com <i class="fa fa-bullseye" style="color: #336687;"></i>e Compromisso pela<a href="https://www.ejectufrn.com.br" target="_blank" style="color: #336687;">EJECT</a>
+						Feito com <b>foco</b> <!--<i class="fa fa-bullseye" style="color: #336687;"></i>-->e <b>compromisso</b> pela<a href="https://www.ejectufrn.com.br" target="_blank" style="color: #336687;">EJECT</a>
 						|  2017.</p> </font>
 					</div>
 				</div>

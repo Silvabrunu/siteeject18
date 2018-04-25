@@ -55,7 +55,7 @@ body {
   top: 0;
   width: 50px;
   height: 100%;
-  background: #3c92ca;
+  background: #334f5d; /* Botão */
   border-radius: 50px;
   text-align: center;
   line-height: 70px;
@@ -104,6 +104,7 @@ body {
 .grop-from .form-action .icon-action:after {
   line-height: 40px;
   content: 'arrow_forward';
+  color: #34505e;
 
 }
 .grop-from .form-action .icon-action.back {
@@ -173,16 +174,16 @@ body {
   color: #9C27B0;
 }
 .grop-from.name .form-head {
-  background: #9C27B0;
+  background: #34505e; /* Botão */
 }
 .grop-from.name .form-head .icon-placeholder:after {
   content: 'face';
 }
 .grop-from.phone {
-  color: #009688;
+  color: #34505e;
 }
 .grop-from.phone .form-head {
-  background: #009688;
+  background: #34505e; /* Botão */
 }
 .grop-from.phone .form-head .icon-placeholder:after {
   content: 'phone';
@@ -191,10 +192,10 @@ body {
   top: -70px;
 }
 .grop-from.email {
-  color: #039BE5;
+  color: #039BE5; /* Botão */
 }
 .grop-from.email .form-head {
-  background: #039BE5;
+  background: #34505e; /* Botão */
 }
 .grop-from.email .form-head .icon-placeholder:after {
   content: 'mail_outline';

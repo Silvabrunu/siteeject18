@@ -1,3 +1,23 @@
+@font-face {
+    font-family: Delicious;
+    src: url(../fonts/Delicious-Roman.otf);
+}
+
+@font-face {
+    font-family: Delicious SC;
+    src: url(../fonts/Delicious-SmallCaps.otf);
+}
+
+
+p, span:before , input, .text, li {
+  font-family: Delicious !important;
+}
+
+h1, h2, h3 {
+  font-family: Delicious SC !important;
+}
+
+
 body > section {
   padding: 70px 0;
 }
@@ -13,12 +33,6 @@ body > section {
   font-weight: 400;
 }
 
-<<<<<<< HEAD
-=======
-.section-quem{
-
-
-}
 
 .section-quem {
     margin-top: 20px;
@@ -59,7 +73,6 @@ body > section {
     margin: 0 auto;
     margin-bottom: 20px;
 }
->>>>>>> 73e2f44b8bcb4abeb953bb78e59ab0879453cde5
 
 
 /*************************

@@ -195,7 +195,7 @@
                   <div class="row">
                     <div class="main_features fix roomy-70" style="padding-bottom: 80px;padding-top: 40px;">
                       <div class="col-md-9 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                        <p style="font-size: 20px">Uma empresa júnior fundada em 15 de julho de 2010, formada apenas por alunos do Bacharelado de Ciências e Tecnologia da UFRN, que são compromissados, focados em resultados e que buscam um diferencial no mercado de trabalho. Prestamos diversos serviços à sociedade, encontrando soluções para variados problemas na área de desenvolvimento web.</p>
+                        <p style="font-size: 20px; line-height: 30px;" align="justify">Uma empresa júnior fundada em 15 de julho de 2010, formada apenas por alunos do Bacharelado de Ciências e Tecnologia da UFRN, que são compromissados, focados em resultados e que buscam um diferencial no mercado de trabalho. Prestamos diversos serviços à sociedade, encontrando soluções para variados problemas na área de desenvolvimento web.</p>
                       </div>
                       <div class="col-md-3">
                         <a href="/blog"><img src="{% static 'core/images/banner.jpg' %}" class="logo" alt=""></a>
@@ -302,142 +302,151 @@
     </div>  
   </div>
 </section>
-                  <!-- Srart Contact Us
-                  =========================================== -->     
                   <section id="contato" class="bg-azultop fix">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="title text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title text-center">
+              <h2 style="color:white">Entre em contato</h2>
+              <span class="border"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" style="padding-bottom: 25px">
+          <!-- Contact Details -->
+          <div class="col-md-6">
+            <div class="contact-info wow fadeInUp" style="padding-bottom: 10px" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <p>Instituto Metrópole Digital (IMD - UFRN), sala B412 (4° piso)</p>
+              <ul class="address">
+                <li style="padding-bottom: 10px"><i class="fa fa-map-marker"></i> <span> Endereço:</span> Av. Capitão Mor. Gouvéia, Lagoa Nova, CEP: 59075-050 </li>
+                <li style="padding-bottom: 10px"><i class="fa fa-phone"></i> <span> Telefone:</span> +55 (84) 3342-2216 Ramal 206 </li>
+                <li style="padding-bottom: 10px"><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:contato@ejectufrn.com.br"> contato@ejectufrn.com.br</a></li>
+              </ul>
+            </div>
 
-                            <h2 style="color:white">Entre em contato</h2>
-                            <span class="border"></span>
+            <div class="col-md-12 google-maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15876.661590476922!2d-35.2054833!3d-5.8322932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x85af869d288f334e!2sEmpresa+J%C3%BAnior+da+Escola+de+Ci%C3%AAncias+e+Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1520308069690" width="350" height="290" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
 
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container">
-                      <div class="row" style="padding-bottom: 25px">
-                        <!-- Contact Details -->
-                        <div class="col-md-6">
-                          <div class="contact-info wow fadeInUp" style="padding-bottom: 10px" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <p>Nossa sede está localizada no Instituto Metrópole Digital (IMD - UFRN), sala B412 (4° piso)</p>
-                            <ul class="address">
-                              <li style="padding-bottom: 3px"><i class="fa fa-map-marker"></i> <span> Endereço:</span> Av. Capitão Mor. Gouvéia, Lagoa Nova, CEP: 59075-050 </li>
-                              <li style="padding-bottom: 3px"><i class="fa fa-phone"></i> <span> Telefone:</span> +55 (84) 3342-2216 Ramal 206 </li>
-                              <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:contato@ejectufrn.com.br"> contato@ejectufrn.com.br</a></li>
-                            </ul>
-                          </div>
-
-                          <div class="col-md-12 google-maps"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15876.661590476922!2d-35.2054833!3d-5.8322932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x85af869d288f334e!2sEmpresa+J%C3%BAnior+da+Escola+de+Ci%C3%AAncias+e+Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1520308069690" width="350" height="290" frameborder="0" style="border:0" allowfullscreen></iframe>
-                          </div>
-                        </div>
-
-                    <!--<div class="map">
-                        <div id="map"></div>
-                      </div>-->
-
-                      <!-- / End Contact Details -->
+          <!-- / End Contact Details -->
 
 
-                      <!-- Contact Form -->
-                      <div class="contact-form col-md-6">
-                        <p style="padding-top: 35px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
-                        <form id="contact-form" method="post" role="form">
-                          {% csrf_token %}
-                          <div class="form-group">
-                            {{ form_contato.nome }}
-                          </div>
-                          <div class="form-group">
-                            {{ form_contato.telefone }}
-                          </div>
+          <!-- Contact Form -->
+          <div class="contact-form col-md-6">
+            <p style="padding-top: 35px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
+            <form id="contact-form" method="post" role="form">
+              {% csrf_token %}
+              <div class="form-group">
+                {{ form_contato.nome }}
+              </div>
+              <div class="form-group">
+                {{ form_contato.telefone }}
+              </div>
 
-                          <div class="form-group">
-                            {{ form_contato.email }}
-                          </div>
+              <div class="form-group">
+                {{ form_contato.email }}
+              </div>
 
-                          <div class="form-group">
-                            {{ form_contato.assunto }}
-                          </div>
+              <div class="form-group">
+                {{ form_contato.assunto }}
+              </div>
 
-                          <div class="form-group">
-                            {{ form_contato.mensagem }}
-                          </div>
+              <div class="form-group">
+                {{ form_contato.mensagem }}
+              </div>
 
-                          <!-- <div id="mail-success" class="success">
-                            Thank you. The Mailman is on His Way :)
-                          </div>
+              <!-- <div id="mail-success" class="success">
+                Thank you. The Mailman is on His Way :)
+              </div>
 
-                          <div id="mail-fail" class="error">
-                            Sorry, don't know what happened. Try later :(
-                          </div> -->
+              <div id="mail-fail" class="error">
+                Sorry, don't know what happened. Try later :(
+              </div> -->
 
-                          <div id="cf-submit">
-                            <input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar">
-                          </div>
-                        </form>
-                      </div>
-                      <!-- ./End Contact Form -->
-                    </div>
-                  </div> <!-- end row -->
-                </section>
+              <div id="cf-submit">
+                <input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar">
+              </div>
+            </form>
+          </div>
+          <!-- ./End Contact Form -->
+        </div>
+      </div> <!-- end row -->
+    </section>
+
+    <div class="md-modal md-effect-1" id="modal-1">
+      <div class="md-content">
+        <h3 style="color: #fff">Saiba Mais</h3>
+        <div>
+          <a class="md-close" href="#pricing" style="color:#fff; float:right;">X</a>
+          <br>
+          <p align="center">Por favor, selecione uma das opções abaixo para mais informações:</p>
+          <br>
+          <button class="btn btn-queroagora">Sites Responsivos | <i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+          <br>
+          <button class="btn btn-queroagora"> Sistemas Web | <i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+          <br>
+          <button class="btn btn-queroagora">Hospedagem | <i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="main_footer fix bg-white text-center p-top-40 p-bottom-30 m-top-0" style="padding-top: 25px;padding-bottom: 15px;">
+        <div class="col-md-12 center wow animated fadeInUp" style="visibility: visible; animation-name: fadeInDown;">
+          <a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-facebook" ></i></a>
+          <a href="https://www.instagram.com/ejectufrn/" target="_blank"><i class="fa fa-instagram" ></i></a>
+          <a href="https://www.linkedin.com/company/16219994/ " target="_blank"><i class="fa fa-linkedin" ></i></a>
 
 
-                <footer>
-                  <div class="main_footer fix bg-white text-center p-top-40 p-bottom-30 m-top-0" style="padding-top: 25px;padding-bottom: 15px;">
-                   <div class="col-md-12 center wow animated fadeInUp" style="visibility: visible; animation-name: fadeInDown;">
-                    <a href="https://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-facebook" ></i></a>
-                    <a href="https://www.instagram.com/ejectufrn/" target="_blank"><i class="fa fa-instagram" ></i></a>
-                    <a href="https://www.linkedin.com/company/16219994/ " target="_blank"><i class="fa fa-linkedin" ></i></a>
+          <font color="black"><p class="rodape wow fadeInRight" data-wow-duration="1s">
+            Feito com <b>foco</b> <!--<i class="fa fa-bullseye" style="color: #336687;"></i>-->e <b>compromisso</b> pela<a href="https://www.ejectufrn.com.br" target="_blank" style="color: #336687;">EJECT</a>
+            |  2017.</p> </font>
+          </div>
+        </div>
+      </footer>
+    </div>
+      <!-- Global site tag (gtag.js' %}) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115305078-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'UA-115305078-1');
+      </script>
 
-                    <font color="black"><p class="rodape wow fadeInRight" data-wow-duration="1s">
-                      Feito com <i class="fa fa-bullseye" style="color: #336687;"></i>e Compromisso pela<a href="https://www.ejectufrn.com.br" target="_blank" style="color: #336687;">EJECT</a> 
-                      |  2018.</p> </font>
-                    </div>
-                  </div>
-                </footer>
+              <!-- JS includes -->
 
+      <script src="{% static 'core/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+      <script src="{% static 'core/js/vendor/jquery-1.11.2.min.js' %}"></script>
+      <script src="{% static 'core/js/vendor/bootstrap.min.js' %}"></script>
 
-                <!-- Global site tag (gtag.js' %}) - Google Analytics -->
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115305078-1"></script>
-                <script>
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
+      <!-- Scripts do home -->
+      <script src="{% static 'core/js/modernizr.js' %}"></script> <!-- Modernizr -->
+      <script src="{% static 'core/js/mains.js' %}"></script> <!-- Resource jQuery -->
 
-                  gtag('config', 'UA-115305078-1');
-                </script>
+      <script src="{% static 'core/js/jquery.magnific-popup.js' %}"></script>
+      <script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
+      <script src="{% static 'core/js/jquery.collapse.js' %}"></script>
+      <script src="{% static 'core/js/bootsnav.js' %}"></script>
 
-                <!-- JS includes -->
+      <!-- lightbox -->
+      <script src="{% static 'core/js/lightbox.min.js' %}"></script>
+      <!-- mix -->
+      <script src="{% static 'core/js/mixitup.min.js' %}"></script>
 
-                <script src="{% static 'core/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
-                <script src="{% static 'core/js/vendor/jquery-1.11.2.min.js' %}"></script>
-                <script src="{% static 'core/js/vendor/bootstrap.min.js' %}"></script>
+      <script src="{% static 'core/js/plugins.js' %}"></script>
+      <script src="{% static 'core/js/main.js' %}"></script>
 
-                <!-- Scripts do home -->
-                <script src="{% static 'core/js/modernizr.js' %}"></script> <!-- Modernizr -->
-                <script src="{% static 'core/js/mains.js' %}"></script> <!-- Resource jQuery -->
-
-                <script src="{% static 'core/js/jquery.magnific-popup.js' %}"></script>
-                <script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
-                <script src="{% static 'core/js/jquery.collapse.js' %}"></script>
-                <script src="{% static 'core/js/bootsnav.js' %}"></script>
-
-                <!-- lightbox -->
-                <script src="{% static 'core/js/lightbox.min.js' %}"></script>
-                <!-- mix -->
-                <script src="{% static 'core/js/mixitup.min.js' %}"></script>
-
-                <script src="{% static 'core/js/plugins.js' %}"></script>
-                <script src="{% static 'core/js/main.js' %}"></script>
-
-                <script src="{% static 'core/js/particle.js' %}"></script>
-                <!-- Owl Carousel -->
-                <script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
-        <!--PORTFOLIO
-        <script src="{% static 'core/js/2jquery.js' %}"></script>
+      <script src="{% static 'core/js/particle.js' %}"></script>
+      <!-- Owl Carousel -->
+      <script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+      <!--PORTFOLIO
+      <script src="{% static 'core/js/2jquery.js' %}"></script>
       --><script src="{% static 'core/js/2jquery.prettyPhoto.js' %}"></script>
       <script src="{% static 'core/js/2jquery.isotope.min.js' %}"></script>
       <script src="{% static 'core/js/2main.js' %}"></script>      
