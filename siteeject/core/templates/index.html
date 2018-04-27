@@ -91,13 +91,15 @@
 						<div class="col-md-10 col-xs-8">
 							<div class="navbar-callus text-left sm-text-center" style="padding-top: 0px">
 								<ul class="list-inline">
-									<li><a href="" style="color: black;"><i class="fa fa-envelope-o" style="color: black;">
-
-									</i style="padding-top: 30px; font-family: Delicious !important;"> contato@ejectufrn.com.br</a></li>
+									<li>
+                    <a href="" style=" font-size: 15px; color: black; font-family: Delicious !important;">
+                      <i class="fa fa-envelope-o" style=" font-size: 15px; color: black;"></i> contato@ejectufrn.com.br
+                    </a>
+                  </li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-md-2 col-xs-4">
+						<div class="col-md-2 col-xs-4"> 
 							<div class="navbar-socail text-right sm-text-center">
 								<ul class="list-inline">
 									<li><a href="http://www.facebook.com/ejectufrn" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -113,7 +115,7 @@
 			<div class="container">            
 				<!-- Start Atribute Navigation -->
 				<div class="attr-nav">        
-					<ul class="navegacao-tela-maior">
+					<ul class="navegacao-tela-maior" style="font-size: 18px;">
 						<li><a href="#home" class="effect-underline">Início</a></li>
 						<li><a href="#features" class="effect-underline">Quem Somos</a></li>
 						<li><a href="#pricing" class="effect-underline">Serviços</a></li>
@@ -177,7 +179,7 @@
 
 	    <!-- CONTINUA HOME -->
 	    <div class="col md-12 texto">
-	    	<h1 style="font-size: 36px; padding-bottom: 10px" class="col-md-12"><strong>Criação de Sites e Sistemas Web</strong></h1>
+	    	<h1 style="font-size: 50px; padding-bottom: 10px" class="col-md-12"><strong>Criação de Sites e Sistemas Web</strong></h1>
 	    	<p style="font-size: 20px; line-height: 30px;" class="col-md-6">Empresa especializada em desenvolvimento de soluções web responsivas e personalizadas.</p>
 	    	<div class="col-md-12"><a href="#pricing" class="btn-home m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Conheça nossos serviços | <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
 	    </div>
@@ -246,11 +248,11 @@
 				<div class="main_features fix roomy-70" style="padding-bottom: 23px;padding-top: 20px;">
 					<div class="col-md-12 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
 
-						<h2 style="color: black; padding-bottom: 8px;">Quem Somos</h2>
+						<h2 style="color: black; padding-bottom: 8px; font-size: 35px;">Quem Somos</h2>
 						<div class="section-title-divider"></div>
 					</div>
 					<div class="col-md-12 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-						<p align="justify">{{ quem_somos.0.descricao }}</p>
+						<p align="justify" style="font-size: 18px;">{{ quem_somos.0.descricao }}</p>
 					</div>
 					<div class="col-md-12"><a href="quemsomos" class="voltar m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Veja Mais | <i class="fa fa-eye" aria-hidden="true"></i></a></div>
 				</div>
@@ -266,22 +268,29 @@
 			<div class="row">
 				<div class="col">
 					<div class="title text-center">
-						<h2 class="ajustesserver" style="padding-bottom: 8px;">Nossos Serviços</h2>
+						<h2 class="ajustesserver" style="padding-bottom: 8px; font-size: 35px; padding-top: 15px;">Nossos Serviços</h2>
 						<div class="section-title-divider-ser"></div>
 						<span class="border"></span>
 						<!--<p class="ajusteserviço" align="justify">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>-->
 					</div>
 				</div>
 			</div>
+
+      {% if form.is_valid %}
+      <script type="text/javascript">
+        alert("Mensagem enviada com sucesso! A Valdecio Tour agradece pelo contato.");
+      </script> 
+      {% endif %}
+
 			<div class="row">
 				<!-- single pricing table -->
 				<div class="col-md-4 col-sm-4 col-xs-12" >
-					<div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+					<div class="pricing-item center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown; font-size: 15px;">
 						<a href="servicos/sitesresponsivos" target="_blank"><div class="post-icon">
 							<i class="fa fa-search-plus"></i></a>
 						</div>
 						<!-- plan name & value -->
-						<div class="price-title bg-pricing">
+						<div class="price-title bg-pricing" style="font-size: 25px;">
 							<h3>Sites Responsivos</h3>
               <br>
 							<a href="servicos/sitesresponsivos" target="_blank"><i class="fa fa-laptop service-icon"></i></a>
@@ -290,7 +299,7 @@
 						<!-- /plan name & value -->
 
 						<!-- plan description -->
-						<ul>
+						<ul style="font-size: 15px;">
 							<li>Institucionais</li>
 							<li>Landing Pages</li>
 							<li>Blogs</li>
@@ -411,7 +420,7 @@
 				<div class="container">
 					<div class="col-md-8 col-md-offset-2 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
 						<div class="ajustessec">
-							<h2 style="color:white">Nossos DIFERENCIAIS</h2>
+							<h2 style="color:white; font-size: 35px; padding-top: 15px;">Nossos DIFERENCIAIS</h2>
 							
 						</div>
 					</div>
@@ -468,9 +477,9 @@
 	<section id="portfolio">
 		<div class="container" style=" padding-bottom: 0px">
 			<div class="center">
-				<h2 style=" padding-bottom: 0px">Portfólio</h2>
+				<h2 style=" padding-bottom: 0px; font-size: 35px;">Portfólio</h2>
 				<div class="section-title-divider-port"></div>
-				<p class="lead">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
+				<p class="lead" style="font-size: 20px;">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
 			</div>
 
 
@@ -515,7 +524,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-				<h2 style="padding-bottom: 8px">Blog</h2>
+				<h2 style="padding-bottom: 8px; font-size: 35px;">Blog</h2>
 				<div class="section-title-divider-blog"></div>
 				<h3><!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam --></h3>
 			</div>
@@ -593,7 +602,7 @@
 <!-- SLICK Carousel -->
 
 <section id="parceiros">
-	<h2 align="center" style="padding-bottom:  10px"> Nossos PARCEIROS </h2>
+	<h2 align="center" style="padding-bottom:  10px; font-size: 35px;"> Nossos PARCEIROS </h2>
 	<div class="section-title-divider-partners"></div>
 
 	<div class="row">
@@ -614,17 +623,17 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="title text-center">
-							<h2 style="color:white">Entre em contato</h2>
+							<h2 style="color:white; font-size: 35px;">Entre em contato</h2>
 							<span class="border"></span>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="container">
-				<div class="row" style="padding-bottom: 25px">
+				<div class="row" style="padding-bottom: 25px; font-size: 15px;">
 					<!-- Contact Details -->
 					<div class="col-md-6">
-						<div class="contact-info wow fadeInUp" style="padding-bottom: 10px" data-wow-duration="1000ms" data-wow-delay="300ms">
+						<div class="contact-info wow fadeInUp" style="padding-bottom: 8px" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<p>Instituto Metrópole Digital (IMD - UFRN), sala B412 (4° piso)</p>
 							<ul class="address">
 								<li style="padding-bottom: 10px"><i class="fa fa-map-marker"></i> <span> Endereço:</span> Av. Capitão Mor. Gouvéia, Lagoa Nova, CEP: 59075-050 </li>
@@ -643,7 +652,7 @@
 
 					<!-- Contact Form -->
 					<div class="contact-form col-md-6">
-						<p style="padding-top: 35px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
+						<p style="padding-top: 35px; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
 						<form id="contact-form" method="post" role="form">
 							{% csrf_token %}
 							<div class="form-group">
