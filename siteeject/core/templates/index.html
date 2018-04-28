@@ -531,37 +531,25 @@
 		</div>
 		<div class="blog-posts">
 			<div class="row">
+				{% for post in postagens %}
 				<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
 					<div class="entry-header blog-space">
-						<a href="#"><img class="img-responsive post-thumb" src="{% static 'core/images/blog/1.jpg' %}" alt=""></a>
-						<h3 style="padding-left: 10px"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-						<span class="date" style="padding-left: 10px">June 26, 2014</span>
-						<span class="cetagory">in <strong>Photography</strong></span>
+						<a href="{{ post.get_absolute_url }}" target="_blank"><img class="img-responsive post-thumb" src="{{ post.capa.url }}" alt=""></a>
+						<h3 style="padding-left: 10px"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+						<span class="date" style="padding-left: 10px">{{ post.created_date|date:'M d/Y' }}</span>
+						<span class="cetagory">em
+							<strong>
+							{% for cat in post.categoria.all %}
+								{{ cat }}
+							{% endfor %}
+							</strong>
+						</span>
 					</div>
 					<div class="entry-content blog-space">
-						<p style="padding-left: 10px;  padding-right: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<p style="padding-left: 10px;  padding-right: 5px">{{ post.subtitle }}. </p>
 					</div>
 				</div>
-				<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-					<div class="entry-header blog-space">
-						<a href="#"><img class="img-responsive post-thumb" src="{% static 'core/images/blog/1.jpg' %}" alt=""></a>
-						<h3 style="padding-left: 10px"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-						<span class="date" style="padding-left: 10px">June 26, 2014</span>
-						<span class="cetagory">in <strong>Photography</strong></span>
-					</div>
-					<div class="entry-content blog-space">
-						<p style="padding-left: 10px;  padding-right: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					</div>
-				</div><div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-				<div class="entry-header blog-space">
-					<a href="#"><img class="img-responsive post-thumb" src="{% static 'core/images/blog/2.jpg' %}" alt=""></a>
-					<h3 style="padding-left: 10px"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-					<span class="date" style="padding-left: 10px">June 26, 2014</span>
-					<span class="cetagory">in <strong>Photography</strong></span>
-				</div>
-				<div class="entry-content blog-space">
-					<p style="padding-left: 10px;  padding-right: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
+				{% endfor %}
 			</div>                   
 		</div>
 	</div>

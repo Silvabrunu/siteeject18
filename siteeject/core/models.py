@@ -3,8 +3,8 @@ from django.db import models
 from django.utils import timezone
 
 class Campo(models.Model):
-	title = models.CharField('Título', max_length=100)
-	descricao = models.CharField('Descrição', max_length=800)
+	title = models.CharField('Título', max_length=100, blank=True)
+	descricao = models.CharField('Descrição', max_length=800, blank=True)
 	create_date = models.DateField('Criado em', default=timezone.now())
 
 	def __str__(self):

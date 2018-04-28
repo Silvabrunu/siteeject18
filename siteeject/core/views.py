@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import QuemSomos, Portifolio, Depoimentos, Parceiros
+from blog.models import Post
 from siteeject import forms
 
 
@@ -117,6 +118,7 @@ def index(request):
 		'portifolio': Portifolio.objects.all(),
 		'depoimentos': Depoimentos.objects.all(),
 		'parceiros': Parceiros.objects.all(),
+		'postagens': Post.objects.all().order_by('-created_date')[:3]
 	}
 
 	return render(request, 'index.html', context)
