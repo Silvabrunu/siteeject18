@@ -38,7 +38,7 @@ body {
   font-size: 1.6rem;
 font-family: 'Roboto', sans-serif;
   color: #ffffff;
-  background: #fff url("../assets/img/bg-pattern.png");
+  background: #fff url("../img/bg-pattern.png");
 }
 
 a {
@@ -511,6 +511,7 @@ BLOG
   font-weight: 400;
   padding: 10px 0;
   color: #666;
+  font-size: 20px
 }
 
 .pricing-table .pricing-item li i {
@@ -529,17 +530,17 @@ BLOG
   color: #fff;
   font-weight: 700;
   margin: 0 0 5px;
-  font-size: 15px;
+  font-size: 25px;
   text-transform: uppercase;
 }
 
 .pricing-table .price-title > p {
   color: #fff;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 20px;
   margin-top: 5px;
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -934,6 +935,11 @@ font-family: 'Roboto', sans-serif;
   font-variant: normal;
   font-weight: 500;
   line-height: 15.4px;
+}
+
+h5.text-white.text-left {
+  font-family: Delicious SC !important;
+  font-size: 20px;
 }
 
 h6 {
@@ -2004,8 +2010,9 @@ a.btn-view {
     font-weight: 700;
 }
 .main_home .home_text h3{
-    font-size:24px;
+    font-size: 30px;
     font-weight: 400;
+    line-height: normal;
 }
 .main_home .slick-dots li button::before {
     font-family: slick;

@@ -484,9 +484,9 @@
 
 
 			<ul class="portfolio-filter text-right">
-				<li><a class="btn btn-default active" href="#" data-filter="*">Todos</a></li>
-				<li><a class="btn btn-default" href="#" data-filter=".bootstrap">Sites Responsivos</a></li>
-				<li><a class="btn btn-default" href="#" data-filter=".html">Sistemas Web</a></li>
+				<li><a class="btn btn-warning active" href="#" data-filter="*">Todos</a></li>
+				<li><a class="btn btn-warning" href="#" data-filter=".bootstrap">Sites Responsivos</a></li>
+				<li><a class="btn btn-warning" href="#" data-filter=".html">Sistemas Web</a></li>
 			</ul><!--/#portfolio-filter-->
 
 			<div class="row">
@@ -536,7 +536,7 @@
 					<div class="entry-header blog-space">
 						<a href="{{ post.get_absolute_url }}" target="_blank"><img class="img-responsive post-thumb" src="{{ post.capa.url }}" alt=""></a>
 						<h3 style="padding-left: 10px"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
-						<span class="date" style="padding-left: 10px">{{ post.created_date|date:'M d/Y' }}</span>
+						<span class="date" style="padding-left: 10px">{{ post.created_date|date:'M d-Y' }}</span>
 						<span class="cetagory">em
 							<strong>
 							{% for cat in post.categoria.all %}
