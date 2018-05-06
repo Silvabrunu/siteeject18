@@ -1,7 +1,10 @@
-
+@font-face {
+    font-family: Delicious;
+    src: url(../../../../../core/static/fonts/Delicious-Roman.otf);
+}
 body {
 	background: #333;
-    font-family: 'Roboto', sans-serif;
+    font-family: Delicious, sans-serif !important;
     font-size: 18px;
     font-weight: 300;
     color: #888;

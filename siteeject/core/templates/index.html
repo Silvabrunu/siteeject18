@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>EJECT - Soluções em Desenvolvimento de Sites e Sistemas Web</title>
-	<meta name="description" content="">
+	<meta name="description" content="Empresa especializada em desenvolvimento de soluções web personalizadas.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" sizes="192x192" href="{% static 'core/images/iconeject.png' %}">
 	<link rel="shortcut icon" href="{% static 'core/images/favicon.png' %}" type="image/png">
@@ -92,8 +92,8 @@
 							<div class="navbar-callus text-left sm-text-center" style="padding-top: 0px">
 								<ul class="list-inline">
 									<li>
-                    <a href="" style=" font-size: 15px; color: black; font-family: Delicious !important;">
-                      <i class="fa fa-envelope-o" style=" font-size: 15px; color: black;"></i> contato@ejectufrn.com.br
+                    <a href="" style=" font-size: 15px; color: #6f6f6f; font-family: Delicious !important;">
+                      <i class="fa fa-envelope-o" style=" font-size: 15px; color: #6f6f6f;"></i> contato@ejectufrn.com.br
                     </a>
                   </li>
 								</ul>
@@ -247,15 +247,16 @@
 			<div class="row">
 				<div class="main_features fix roomy-70" style="padding-bottom: 23px;padding-top: 20px;">
 					<div class="col-md-12 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-
-						<h2 style="color: black; padding-bottom: 8px; font-size: 35px;">Quem Somos</h2>
+						<br>
+						<h2 style="color: #26485c; padding-bottom: 8px; font-size: 35px;">Quem Somos</h2>
 						<div class="section-title-divider"></div>
 					</div>
 					<div class="col-md-12 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-						<p align="justify" style="font-size: 18px;">{{ quem_somos.0.descricao }}</p>
+						<p align="justify" style="font-size: 18px; line-height: 32px;">{{ quem_somos.0.descricao }}</p>
 					</div>
 					<div class="col-md-12"><a href="quemsomos" class="voltar m-top-20 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Veja Mais | <i class="fa fa-eye" aria-hidden="true"></i></a></div>
 				</div>
+				<br>
 			</div><!-- End off row -->
 		</div><!-- End off container -->
 	</section><!-- End off Featured Section-->
@@ -268,8 +269,11 @@
 			<div class="row">
 				<div class="col">
 					<div class="title text-center">
+						<br>
 						<h2 class="ajustesserver" style="padding-bottom: 8px; font-size: 35px; padding-top: 15px;">Nossos Serviços</h2>
 						<div class="section-title-divider-ser"></div>
+						<br>
+						<br>
 						<span class="border"></span>
 						<!--<p class="ajusteserviço" align="justify">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>-->
 					</div>
@@ -421,7 +425,8 @@
 					<div class="col-md-8 col-md-offset-2 center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
 						<div class="ajustessec">
 							<h2 style="color:white; font-size: 35px; padding-top: 15px;">Nossos DIFERENCIAIS</h2>
-							
+							<br>
+							<div class="section-title-divider-con" style="color: #fff;"></div>
 						</div>
 					</div>
 
@@ -477,11 +482,13 @@
 	<section id="portfolio">
 		<div class="container" style=" padding-bottom: 0px">
 			<div class="center">
-				<h2 style=" padding-bottom: 0px; font-size: 35px;">Portfólio</h2>
+				<br>
+				<h2 style=" padding-bottom: 0px; font-size: 35px; color: #26485c;">Portfólio</h2>
 				<div class="section-title-divider-port"></div>
+				<br>
 				<p class="lead" style="font-size: 20px;">Nossos projetos web suprem as necessidades internas da EJECT e principalmente as necessidades dos nossos clientes.</p>
 			</div>
-
+			<br>
 
 			<ul class="portfolio-filter text-right">
 				<li><a class="btn btn-warning active" href="#" data-filter="*">Todos</a></li>
@@ -500,7 +507,7 @@
 					{% endif %}
 					col-xs-12 col-sm-4 col-md-4">
 					<div class="recent-work-wrap">
-						<img class="img-responsive" src="{{ item.imagem.url }}" alt="" style="height: 250px !important">
+						<img class="img-responsive img-portifolio" src="{{ item.imagem.url }}" alt="" style="height: 250px !important">
 						<div class="overlay">
 							<div class="recent-work-inner">
 								<h3><a>{{ item.titulo }}</a></h3>
@@ -524,9 +531,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-				<h2 style="padding-bottom: 8px; font-size: 35px;">Blog</h2>
+				<h2 style="padding-bottom: 8px; font-size: 35px; color: #26485c;">Blog</h2>
 				<div class="section-title-divider-blog"></div>
-				<h3><!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam --></h3>
 			</div>
 		</div>
 		<div class="blog-posts">
@@ -534,7 +540,7 @@
 				{% for post in postagens %}
 				<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
 					<div class="entry-header blog-space">
-						<a href="{{ post.get_absolute_url }}" target="_blank"><img class="img-responsive post-thumb" src="{{ post.capa.url }}" alt=""></a>
+						<a href="{{ post.get_absolute_url }}" target="_blank"><img class="img-responsive post-thumb img-post" src="{{ post.capa.url }}" alt="" style="height: 250px !important;"></a>
 						<h3 style="padding-left: 10px"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
 						<span class="date" style="padding-left: 10px">{{ post.created_date|date:'M d-Y' }}</span>
 						<span class="cetagory">em
@@ -572,6 +578,7 @@
 							<div class="home_text col-sm-12 col-md-12 col-xs-12">
 								<div class="col-md-4 col-sm-2 fh5co-vcard"><img style="border-radius: 50%;" src="{{ depoimento.imagem.url }}"></div>
 								<h3 class="text-white">“{{ depoimento.descricao }}”</h3>
+								<br>
 								<h5 class="text-white text-left">- {{ depoimento.nome }},<strong>{{ depoimento.empresa }}</strong> -</h5>
 							</div>
 							<!-- INICIO DO FORM -->
@@ -590,16 +597,20 @@
 <!-- SLICK Carousel -->
 
 <section id="parceiros">
-	<h2 align="center" style="padding-bottom:  10px; font-size: 35px;"> Nossos PARCEIROS </h2>
+	<br>
+	<h2 align="center" style="padding-bottom:  10px; font-size: 35px; color:#26485c;"> Nossos PARCEIROS </h2>
 	<div class="section-title-divider-partners"></div>
-
+	<br>
 	<div class="row">
 		<div class="container">
 			<section class="customer-logos slider">
 				{% for parceiro in parceiros %}
-				<div class="slide"><a href="{{ parceiro.link }}" target="."><img src="{{ parceiro.imagem.url }}"></a></div>
+				<div class="slide"><a href="{{ parceiro.link }}" target="."><img src="{{ parceiro.imagem.url }}" style="margin-right: 15px; max-height: 150px;"></a></div>
 				{% endfor %}
 			</section>
+			<br>
+			<br>
+			<br>
 		</div>
 	</div>
 </section>
@@ -612,6 +623,8 @@
 					<div class="col-md-12">
 						<div class="title text-center">
 							<h2 style="color:white; font-size: 35px;">Entre em contato</h2>
+							<br>
+							<div class="section-title-divider-con" style="color: #fff;"></div>
 							<span class="border"></span>
 						</div>
 					</div>
@@ -640,7 +653,7 @@
 
 					<!-- Contact Form -->
 					<div class="contact-form col-md-6">
-						<p style="padding-top: 35px; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
+						<p style="padding-top: 30px;padding-bottom: 20px; font-size: 20px;" align="center">Estamos ansiosos pelo seu contato!</p>
 						<form id="contact-form" method="post" role="form">
 							{% csrf_token %}
 							<div class="form-group">
@@ -715,34 +728,34 @@
 		</div>
 
 
-		<!-- JS includes -->
+	<!-- JS includes -->
 
-		<script src="{% static 'core/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
-		<script src="{% static 'core/js/vendor/jquery-1.11.2.min.js' %}"></script>
-		<script src="{% static 'core/js/vendor/bootstrap.min.js' %}"></script>
+	<script src="{% static 'core/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+	<script src="{% static 'core/js/vendor/jquery-1.11.2.min.js' %}"></script>
+	<script src="{% static 'core/js/vendor/bootstrap.min.js' %}"></script>
 
-		<!-- Scripts do home -->
-		<script src="{% static 'core/js/modernizr.js' %}"></script> <!-- Modernizr -->
-		<script src="{% static 'core/js/mains.js' %}"></script> <!-- Resource jQuery -->
+	<!-- Scripts do home -->
+	<script src="{% static 'core/js/modernizr.js' %}"></script> <!-- Modernizr -->
+	<script src="{% static 'core/js/mains.js' %}"></script> <!-- Resource jQuery -->
 
-		<script src="{% static 'core/js/jquery.magnific-popup.js' %}"></script>
-		<script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
-		<script src="{% static 'core/js/jquery.collapse.js' %}"></script>
-		<script src="{% static 'core/js/bootsnav.js' %}"></script>
+	<script src="{% static 'core/js/jquery.magnific-popup.js' %}"></script>
+	<script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static 'core/js/jquery.collapse.js' %}"></script>
+	<script src="{% static 'core/js/bootsnav.js' %}"></script>
 
-		<!-- lightbox -->
-		<script src="{% static 'core/js/lightbox.min.js' %}"></script>
-		<!-- mix -->
-		<script src="{% static 'core/js/mixitup.min.js' %}"></script>
+	<!-- lightbox -->
+	<script src="{% static 'core/js/lightbox.min.js' %}"></script>
+	<!-- mix -->
+	<script src="{% static 'core/js/mixitup.min.js' %}"></script>
 
-		<script src="{% static 'core/js/plugins.js' %}"></script>
-		<script src="{% static 'core/js/main.js' %}"></script>
+	<script src="{% static 'core/js/plugins.js' %}"></script>
+	<script src="{% static 'core/js/main.js' %}"></script>
 
-		<script src="{% static 'core/js/particle.js' %}"></script>
-		<!-- Owl Carousel -->
-		<script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
-		<!--PORTFOLIO
-		<script src="assets/js/2jquery.js"></script>
+	<script src="{% static 'core/js/particle.js' %}"></script>
+	<!-- Owl Carousel -->
+	<script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+	<!--PORTFOLIO
+	<script src="assets/js/2jquery.js"></script>
 	--><script src="{% static 'core/js/2jquery.prettyPhoto.js' %}"></script>
 	<script src="{% static 'core/js/2jquery.isotope.min.js' %}"></script>
 	<script src="{% static 'core/js/2main.js' %}"></script>

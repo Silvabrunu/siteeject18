@@ -38,7 +38,7 @@ body {
   font-size: 1.6rem;
 font-family: 'Roboto', sans-serif;
   color: #ffffff;
-  background: #fff url("../img/bg-pattern.png");
+  background: #fff;
 }
 
 a {
@@ -68,8 +68,6 @@ Continua home
 Main Components 
 
 -------------------------------- */
-
-
 
 .section-title-divider {
     margin-top: 20px;
@@ -191,6 +189,26 @@ Main Components
     margin-bottom: 20px;
 }
 
+.section-title-divider-con {
+    margin-top: 20px;
+    width: 130px;
+    height: 3px;
+    background: #fff;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.section-title-divider-con:hover {
+        -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    margin-top: 20px;
+    width: 100px;
+    height: 3px;
+    background: #fff;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
 .cd-background-wrapper {
   background-color: #001426;
   position: relative;
@@ -252,7 +270,7 @@ Main Components
 html,
 body {
     font-size: 14px;
-    color: black;
+    color: #6f6f6f !important;
     width: 100%;
     padding: 0;
     margin-left: 0;
@@ -330,7 +348,7 @@ BLOG
     
 .heading {
     padding-top: 20px;
-  padding-bottom:50px;
+  padding-bottom:0px;
 }
 
 .post-thumb {
@@ -510,7 +528,7 @@ BLOG
 .pricing-table .pricing-item li {
   font-weight: 400;
   padding: 10px 0;
-  color: #666;
+  color: #6f6f6f;
   font-size: 20px
 }
 
@@ -2390,6 +2408,11 @@ a.effect-underline:hover:after {
   color: white;
 }
 
+@font-face {
+    font-family: Delicious;
+    src: url(../fonts/Delicious-Roman.otf);
+}
+
 .contact-form .form-control {
   background-color: rgba(255,255,255, 1);
   border: 1px solid #dedede;
@@ -2398,7 +2421,7 @@ a.effect-underline:hover:after {
   color: black;
   height: 38px;
   border-radius: 3px;
-font-family: 'Roboto', sans-serif;
+  font-family: Delicious !important;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;
@@ -2513,7 +2536,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 #portfolio{
- margin-bottom: 60px;
+ margin-bottom: 20px;
  margin-top: 20px;
  background-color: white;
 }
@@ -2939,4 +2962,17 @@ text-shadow: 0 0 0 #ee3733;
         left: 0;
         width: 100% !important;
         height: 100% !important;
+    }
+
+
+    .img-post {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .img-portfolio {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }

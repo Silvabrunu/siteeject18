@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import QuemSomos, Portifolio, Depoimentos, Parceiros, Correio
+from .models import *
 
 admin.site.register(QuemSomos)
+admin.site.register(VejaMais)
 admin.site.register(Portifolio)
 admin.site.register(Depoimentos)
 admin.site.register(Parceiros)

@@ -102,7 +102,7 @@
             <div class="col-md-10">
               <div class="navbar-callus text-left sm-text-center">
                 <ul class="list-inline">
-                  <li><a href="" style="color: black;"><i class="fa fa-envelope-o" style="color: black;"></i> contato@ejectufrn.com.br</a></li>
+                  <li><a href="" style="color: #6f6f6f;"><i class="fa fa-envelope-o" style="color: #6f6f6f;"></i> contato@ejectufrn.com.br</a></li>
                 </ul>
               </div>
             </div>
@@ -123,7 +123,7 @@
         <!-- Start Atribute Navigation -->
         <div class="attr-nav">
 
-          <ul class="navegacao-tela-maior">
+          <ul class="navegacao-tela-maior" style="font-size: 18px;">
           <li><a href="/" class="effect-underline">Início</a></li>
             <li><a href="#proposito" class="effect-underline">O que nos move</a></li>
             <li><a href="#contato" class="effect-underline">Contato</a></li>
@@ -195,7 +195,7 @@
                   <div class="row">
                     <div class="main_features fix roomy-70" style="padding-bottom: 80px;padding-top: 40px;">
                       <div class="col-md-9 qsomosp center wow animated fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                        <p style="font-size: 20px; line-height: 30px;" align="justify">Uma empresa júnior fundada em 15 de julho de 2010, formada apenas por alunos do Bacharelado de Ciências e Tecnologia da UFRN, que são compromissados, focados em resultados e que buscam um diferencial no mercado de trabalho. Prestamos diversos serviços à sociedade, encontrando soluções para variados problemas na área de desenvolvimento web.</p>
+                        <p style="font-size: 20px; line-height: 30px;" align="justify">{{ vejamais.descricao | linebreaks }}</p>
                       </div>
                       <div class="col-md-3">
                         <a href="/blog"><img src="{% static 'core/images/banner.jpg' %}" class="logo" alt=""></a>
@@ -308,6 +308,8 @@
           <div class="col-md-12">
             <div class="title text-center">
               <h2 style="color:white">Entre em contato</h2>
+              <br>
+              <div class="section-title-divider-con" style="color: #fff;"></div>
               <span class="border"></span>
             </div>
           </div>
@@ -336,7 +338,7 @@
 
           <!-- Contact Form -->
           <div class="contact-form col-md-6">
-            <p style="padding-top: 35px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
+            <p style="padding-top: 30px;padding-bottom: 20px; font-size: 20px;" align="center">Estamos ansiosos pelo seu contato!</p>
             <form id="contact-form" method="post" role="form">
               {% csrf_token %}
               <div class="form-group">

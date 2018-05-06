@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import QuemSomos, Portifolio, Depoimentos, Parceiros
+from .models import QuemSomos, Portifolio, Depoimentos, Parceiros, VejaMais
 from blog.models import Post
 from siteeject import forms
 
@@ -126,7 +126,8 @@ def index(request):
 def quem_somos(request):
 	context = {
 		'quem_somos': QuemSomos.objects.all(),
-		'form_contato': forms.Contato()
+		'form_contato': forms.Contato(),
+		'vejamais': VejaMais.objects.last(),
 	}
 
 	if request.method == 'POST':

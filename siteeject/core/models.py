@@ -20,6 +20,14 @@ class QuemSomos(Campo):
 		verbose_name_plural = 'Quem Somos'
 
 
+class VejaMais(models.Model):
+	title = models.CharField('Título', max_length=100, blank=True)
+	descricao = models.TextField('Descrição', blank=True)
+
+	class Meta:
+		verbose_name_plural = 'Quem Somos'
+
+
 class Portifolio(CampoImagem):
 	categorias = (
 		('NA', 'Outros'),
