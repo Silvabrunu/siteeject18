@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Saiba mais sobre Sistemas Web</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="{% static 'servicos/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'servicos/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'servicos/css/form-elements.css' %}">
+        <link rel="stylesheet" href="{% static 'servicos/css/style_servicos.css' %}">
+        <link rel="stylesheet" href="{% static 'servicos/css/style2_servicos.css' %}">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="icon" sizes="192x192" href="{% static 'servicos/img/iconeject.png' %}">
+        <link rel="shortcut icon" href="{% static 'servicos/img/favicon.png' %}" type="image/png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'servicos/ico/apple-touch-icon-144-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'servicos/ico/apple-touch-icon-114-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'servicos/ico/apple-touch-icon-72-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" href="{% static 'servicos/ico/apple-touch-icon-57-precomposed.png' %}">
+
+    </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+        	<div class="container">
+                	
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+                        <h1>Saiba mais sobre Sistemas Web</h1>
+                        <div class="description">
+                        	<p>
+	                         	Criamos e desenvolvemos sistemas web personalizados de acordo com a necessidade do nosso cliente.
+	                         	a <a href="http://ejectufrn.com.br" target="_blank">EJECT</a>, 
+	                         	está aqui pra agilizar os processos da sua empresa através do compartilhamento de informações na Nuvem!
+                        	</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 show-forms">
+                    	<span class="show-register-form active">Solicitar Orçamento</span> 
+                    	<span class="show-forms-divider">/</span> 
+                    	</div>
+                </div>
+                
+                <div class="row register-form">
+                    <div class="col-sm-4 col-sm-offset-1">
+						<form role="form" action="" method="post" class="r-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="sr-only" for="r-form-first-name">Seu Nome...</label>
+                                {{ form_sistemas.nome }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="r-form-last-name">Telefone...</label>
+                                {{ form_sistemas.telefone }}
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="r-form-email">Email</label>
+                                {{ form_sistemas.email }}
+                            </div>
+                            <div class="form-group">
+                                {{ form_sistemas.opcoes }}
+                            </div>
+                            {{ form_sistemas.origem }}
+                            <button id="button"></button>
+                        </form>
+                    </div>
+                    <div class="col-sm-6 forms-right-icons">
+						<div class="row">
+							<div class="col-sm-2 icon"><i class="fa fa-eject"></i></div>
+							<div class="col-sm-10">
+								<h3>StartUp's</h3>
+								<p>Tem uma ideia inovadora? Coloque em prática através de um Produto Minimo Viavel pronto pra ser validado no mercado, a EJECT irá transformar a sua ideia em realidade.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-2 icon"><i class="fa fa-dollar"></i></div>
+							<div class="col-sm-10">
+								<h3>E-commerce</h3>
+								<p>Loja virtual perfeita para você que quer vender através do seu site que pode impulsionar os seus lucros de forma segura e inteligente.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-2 icon"><i class="fa fa-cogs"></i></div>
+							<div class="col-sm-10">
+								<h3>Sistemas de Gestão</h3>
+								<p>A ferramenta certa para melhorar a produtividade do seu negócio, com agilidade e estratégias de monitoramento disponiveis 24 horas por dia.</p>
+							</div>
+						</div>
+                    </div>
+                </div>
+                
+                <!--
+                <div class="row login-form">
+                    <div class="col-sm-4 col-sm-offset-1">
+						<form role="form" action="" method="post" class="l-form">
+	                    	<div class="form-group">
+	                    		<label class="sr-only" for="l-form-username">Username</label>
+	                        	<input type="text" name="l-form-username" placeholder="Username..." class="l-form-username form-control" id="l-form-username">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="l-form-password">Password</label>
+	                        	<input type="password" name="l-form-password" placeholder="Password..." class="l-form-password form-control" id="l-form-password">
+	                        </div>
+				            <button type="submit" class="btn">Sign in!</button>
+				    	</form>
+				    	<div class="social-login">
+                        	<p>Or login with:</p>
+                        	<div class="social-login-buttons">
+	                        	<a class="btn btn-link-1" href="#"><i class="fa fa-facebook"></i></a>
+	                        	<a class="btn btn-link-1" href="#"><i class="fa fa-twitter"></i></a>
+	                        	<a class="btn btn-link-1" href="#"><i class="fa fa-google-plus"></i></a>
+                        	</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 forms-right-icons">
+						<div class="row">
+							<div class="col-sm-2 icon"><i class="fa fa-user"></i></div>
+							<div class="col-sm-10">
+								<h3>New Features</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-2 icon"><i class="fa fa-eye"></i></div>
+							<div class="col-sm-10">
+								<h3>Easy To Use</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-2 icon"><i class="fa fa-twitter"></i></div>
+							<div class="col-sm-10">
+								<h3>Social Integrated</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+							</div>
+						</div>
+                    </div>
+                </div>-->
+                    
+        	</div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+        	<div class="container">
+        		<div class="row">
+        			
+        			<div class="col-sm-8 col-sm-offset-2">
+        				<div class="footer-border"></div>
+        				<p>Feito pela <a href="http://ejectufrn.com.br" target="_blank">EJECT</a>.</p>
+        			</div>
+        			
+        		</div>
+        	</div>
+        </footer>
+
+        <!-- Javascript -->
+        <script type="text/javascript">
+            var bg_path = "{% static 'servicos/img/backgrounds/dife.jpg' %}";
+        </script>
+
+        <script src="{% static 'servicos/js/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'servicos/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'servicos/js/jquery.backstretch.min.js' %}"></script>
+        <script src="{% static 'servicos/js/scripts.js' %}"></script>
+        <script src="{% static 'servicos/js/jquery.mask.min.js' %}"></script>
+
+        <script  src="{% static 'servicos/js/index_servicos.js' %}"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>

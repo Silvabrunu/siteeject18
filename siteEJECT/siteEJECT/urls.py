@@ -1,4 +1,4 @@
-"""siteEJECT URL Configuration
+"""siteeject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -13,21 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
+from django.conf.urls import url, include
 from django.contrib import admin
-from django.conf import settings
 from django.conf.urls.static import static
-
-from core.views import *
+from siteeject import settings
 
 urlpatterns = [
-    url(r'^$', index, name='index'),
-    # url(r'^blog/', include('Blog.urls', namespace='blog')),
-    # url(r'^area-de-atuacao/', include('core.urls', namespace='area')),
-    # url(r'^perfil/(?P<slug>[\w_-]+)/$', perfil , name='perfil'),
-    # url(r'^politica-de-privacidade/$', politica , name='politica'),
     url(r'^admin/', admin.site.urls),
-]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'', include('core.urls', namespace='core')),
+    url(r'^servicos/', include('servicos.urls', namespace='servicos')),
+    url(r'^blog/', include('blog.urls', namespace='blog'))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

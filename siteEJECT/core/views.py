@@ -4,50 +4,45 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 
 from django.core.mail import send_mail
-from django.conf import settings 
+from django.conf import settings
+from .models import QuemSomos, Portifolio, Depoimentos, Parceiros, VejaMais
+from blog.models import Post
+from siteeject import forms
 
-from home.models import *
-from home.forms import *
-
-from django.http import HttpResponse
 
 def index(request):
 	success = False
-	form = ContactSoliciteUmaProposta()
-	formServicoResponsivo = ContactServicoSitesResponsivos()
-	formServicoSistemaWEB = ContactServicoSistemasWEB()
-	formServicoHospedagem = ContactServicoHospedagem()
-	
+	form = forms.ContactSoliciteUmaProposta()
+	formServicoResponsivo = forms.ContactServicoSitesResponsivos()
+	formServicoSistemaWEB = forms.ContactServicoSistemasWEB()
+	formServicoHospedagem = forms.ContactServicoHospedagem()
+
 
 	if request.method == 'POST':
 		validacaoProposta = request.POST.get("validacaoProposta")
 		validacaoResponsivo = request.POST.get("validacaoServicoResponsivo")
 		validacaoSistemaWEB = request.POST.get("validacaoServicoSistemaWEB")
 		validacaoHospedagem = request.POST.get("validacaoServicoHospedagem")
-		form = ContactSoliciteUmaProposta(request.POST)
-		slideTitulo = request.POST.get("tituloSlide")
-		if validacaoProposta == 'valido':
+		form = forms.ContactSoliciteUmaProposta(request.POST)
+		slideTitulo = "HOME"
 		
-			
+		if validacaoProposta == 'valido':
 			if form.is_valid():
-				# context={'is_valid':True}
-				# form.send_mail()
 				lugar = "Solicite uma proposta"
 				name = form.cleaned_data['name']
 				about = form.cleaned_data['about']
 				email = form.cleaned_data['email']
 				phone = form.cleaned_data['phone']
 				deviceContact = form.cleaned_data['deviceContact']
-				#slide = form.cleaned_data['slide']
 				subject = 'Contato sobre:{0} + {1} + {2}'.format(about, lugar, slideTitulo)
 				message = 'Nome: {0}\nE-mail:{1}\nTelefone:{2}\nForma de contato:{3}'.format(name, email, phone, deviceContact)
-				form = ContactSoliciteUmaProposta()
+				form = forms.ContactSoliciteUmaProposta()
 				send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.DEFAULT_FROM_EMAIL])
 				success = True
 		else:
-			form = ContactSoliciteUmaProposta()
+			form = forms.ContactSoliciteUmaProposta()
 
-		formServicoResponsivo = ContactServicoSitesResponsivos(request.POST)
+		formServicoResponsivo = forms.ContactServicoSitesResponsivos(request.POST)
 		if validacaoResponsivo == 'valido':
 			
 			if formServicoResponsivo.is_valid():
@@ -60,14 +55,14 @@ def index(request):
 		
 				subject = 'Contato sobre: Nossos servicos + {0}'.format(lugar2)
 				message = 'Nome: {0}\nE-mail:{1}\nTelefone:{2}'.format(name2, email2, phone2)
-				formServicoResponsivo = ContactServicoSitesResponsivos()
+				formServicoResponsivo = forms.ContactServicoSitesResponsivos()
 
 				send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.DEFAULT_FROM_EMAIL])
 				success = True
 		else:
-			formServicoResponsivo = ContactServicoSitesResponsivos()
+			formServicoResponsivo = forms.ContactServicoSitesResponsivos()
 
-		formServicoSistemaWEB = ContactServicoSistemasWEB(request.POST)
+		formServicoSistemaWEB = forms.ContactServicoSistemasWEB(request.POST)
 		if validacaoSistemaWEB == 'valido':
 			
 			if formServicoSistemaWEB.is_valid():
@@ -80,14 +75,14 @@ def index(request):
 		
 				subject = 'Contato sobre: Nossos servicos + {0}'.format(lugar)
 				message = 'Nome: {0}\nE-mail:{1}\nTelefone:{2}'.format(name, email, phone)
-				formServicoSistemaWEB = ContactServicoSistemasWEB()
+				formServicoSistemaWEB = forms.ContactServicoSistemasWEB()
 
 				send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.DEFAULT_FROM_EMAIL])
 				success = True
 		else:
-			formServicoSistemaWEB = ContactServicoSitesResponsivos()
+			formServicoSistemaWEB = forms.ContactServicoSitesResponsivos()
 
-		formServicoHospedagem = ContactServicoHospedagem(request.POST)
+		formServicoHospedagem = forms.ContactServicoHospedagem(request.POST)
 		if validacaoHospedagem == 'valido':
 			
 			if formServicoHospedagem.is_valid():
@@ -100,21 +95,47 @@ def index(request):
 		
 				subject = 'Contato sobre: Nossos servicos + {0}'.format(lugar)
 				message = 'Nome: {0}\nE-mail:{1}\nTelefone:{2}'.format(name, email, phone)
-				formServicoHospedagem = ContactServicoHospedagem()
+				formServicoHospedagem = forms.ContactServicoHospedagem()
 
 				send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.DEFAULT_FROM_EMAIL])
 				success = True
 		else:
-			formServicoHospedagem = ContactServicoHospedagem()
+			formServicoHospedagem = forms.ContactServicoHospedagem()
+
+		form_contato = forms.Contato(request.POST)
+
+		if form_contato.is_valid():
+			success = form_contato.send_email('FOOTER HOME')
 
 	context = {
-		'banner': SlideShow.objects.all(), 
-		'partner': Partner.objects.all(),
-		'form':form,
-		'form2':formServicoResponsivo,
-		'form3':formServicoSistemaWEB,
-		'form4':formServicoHospedagem,
-	 	'success':success,
-
+		'form_solicitacao': form,
+		'form_servico_responsivo': formServicoResponsivo,
+		'form_servico_sistema_web': formServicoSistemaWEB,
+		'form_servico_hospedagem': formServicoHospedagem,
+		'form_contato': forms.Contato(),
+	 	'success': success,
+	 	'quem_somos': QuemSomos.objects.all(),
+		'portifolio': Portifolio.objects.all(),
+		'depoimentos': Depoimentos.objects.all(),
+		'parceiros': Parceiros.objects.all(),
+		'postagens': Post.objects.all().order_by('-created_date')[:3]
 	}
+
 	return render(request, 'index.html', context)
+
+def quem_somos(request):
+	context = {
+		'quem_somos': QuemSomos.objects.all(),
+		'form_contato': forms.Contato(),
+		'vejamais': VejaMais.objects.last(),
+	}
+
+	if request.method == 'POST':
+		# form = forms.CorreioForm(request.POST)
+		# form.persistir()
+		form_contato = forms.Contato(request.POST)
+
+		if form_contato.is_valid():
+			context['enviado'] = form_contato.send_email('FOOTER QUEM SOMOS')
+
+	return render(request, 'quem-somos.html', context)
